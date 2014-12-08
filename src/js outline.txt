@@ -1,0 +1,120 @@
+- Client Side – JavaScript
+	- <script type="text/javascript">…code here… </script>
+	- <script type="text/javascript" src="file.js"><!-- no code here --></script>
+	- statements
+		- semicolons;
+	- values and types
+		- string, number, boolean
+		- null, undefined, NaN
+		- var
+	- operators
+		- + addition and concatenation
+		- -, *, /
+		- % remainder
+		- bool ? "true" : "false" — ternary operator
+	- variables
+	- alert() confirm() prompt()
+	- parseInt(n, radix)
+	- parseFloat(n)
+	- control statements
+		- if
+		- if .. else
+		- if .. else if .. else
+			- ||, &&, !, !!
+		- switch .. case .. break .. default
+		- do .. while
+		- while ..
+		- for ..
+		- blocks not always required
+	- strings
+		- length property
+		- indexOf(), lastIndexOf()
+		- charAt()
+		- substr(), substring(), slice() and the differences
+		- toLowerCase(), toUpperCase()
+		- trim() - ECMAScript 5, no IE < 8
+	- arrays
+		- ordered collections of variables
+		- elements/members
+		- literal syntax [ 1, 2, 3, 4 ] [ "a", "b","c","d" ]
+		- index starts at 0
+		- access an array member/element by its index - collection[n]
+		- length property - number of members
+			- array length 1, only member is index 0
+		- sort(), sort(function(a,b) { return parseFloat(a)-parseFloat(b) }
+			- understand why sort() sucks
+				- it can't sort alphabetically case-insensitive
+					- A, B, C, a, b, c — not A, a, B, b, C, c
+				- it can't sort numerically
+					- 0, 10, 11, 1, 2, 9 — not 0, 1, 2, 9, 10, 11
+				- Why: it sorts by string character codepoints.
+					- 0 = 48, A = 65, a = 97, etc.
+					- www.asciitable.com, but with every Unicode code point.
+		- push(), pop(), shift(), unshift()
+		- splice()
+		- string.split()
+		- array.join()
+	- Date
+		- new Date()
+		- new Date(y,m,d,h,min,s,ms)
+		- new Date(string)
+		- .getMonth() => 0..11
+		- .getDay() => 0..6, 0 = Sunday
+		- awareness of its many methods
+		- awareness of timezones
+			- www.youtube.com/watch?v=-5wpm-gesOY
+	- regular expressions
+		- regexone.com
+		- var pattern = /…/g;
+		- pattern.test(string)
+		- string.match(pattern)
+		- string.replace(pattern)
+	- functions
+		- invoking functions - calling
+		- defining functions
+		- function input - parameters/arguments
+			- option = option || "default"; // using || as default operator
+		- function output - return
+		- function scope - functions can access variables defined outside of themselves
+			- var inside functions limits a variable to only exist inside that function when it is called.
+	- DOM
+		- document.getElementById("contact-form")
+		- document.getElementsByName("p")
+		- element.getElementsByName("a")
+		- document.querySelector("#css-selector")
+		- document.querySelectorAll(".css .selector")
+		- element.querySelector(".css")
+		- element.querySelectorAll(".css")
+		- element.addEventListener('event name', function(evt) { … } )
+			- click
+			- submit
+			- DOMContentLoaded
+		- evt.preventDefault()
+		- element.value
+		- element.innerHTML
+		- element.checked
+		- element.classList => […], .contains(), .toggle()
+		- element.className => ""
+- Advanced Client Side – JavaScript
+	- objects
+		- like arrays, but with keys instead of indexes
+		- var worker = { 'name': 'bob', 'age': 30, 'job': 'desk' }
+		- worker.name
+		- worker['name']
+		- JSON
+		- methods - worker.pay = function (wage) { … }
+			- worker.pay(1234);
+	- object prototypes
+		- Obj = function ( … ) { // constructor }
+		- Obj.prototype.method = function ( … ) { … }
+		- obj = new Obj( … ); // calls constructor, returns new object, instance of Obj.
+		- Array.prototype.shuffle = function () { … }
+		- String.prototype.trim, etc
+			- JS polyfills
+	- ECMAscript 5 + 6 methods
+		- Array
+			- every(), forEach(), find(), map(), keys(), reduce(), and so on.
+		- String
+			- contains()
+- Not teaching
+	- Strict mode
