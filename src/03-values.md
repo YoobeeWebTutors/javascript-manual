@@ -20,7 +20,7 @@ In JavaScript we can work with different values.
 * `0`
 * `1.2308956109358613e+19`
 
-Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*
+Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*. The `e+01` or `e-01` numbers are exponents: multply the preceding number by this number of powers of ten.
 
 ### Know your limits
 
