@@ -20,7 +20,21 @@ In JavaScript we can work with different values.
 * `0`
 * `1.2308956109358613e+19`
 
-Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*. The `e+01` or `e-01` numbers are exponents: multply the preceding number by this number of powers of ten.
+Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*. Floats can contain up to 16 significant figures total, both before and after the decimal point.
+
+The `e+01` or `e-01` numbers are exponents: multply the preceding number by this number of powers of ten. JavaScript automatically converts very large numbers to exponents where necessary.
+
+### Numerical Equivelence
+
+```js
+alert(100.00);
+```
+
+This alerts `100`. Why not `100.00`? Numbers in JavaScript have no concept of desired decimal places. There's not a simple way to tell it how many trailing zeroes you want.
+
+In fact, when we write `3.60`, JavaScript stores the value `3.6`. `3.60` and `3.6` are numerically identical values.
+
+There are functions we can write and use to present numbers in different formats, but out of the box, we get this behaviour.
 
 ### Know your limits
 
