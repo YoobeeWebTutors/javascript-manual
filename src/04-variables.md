@@ -11,7 +11,9 @@ console.log(username);
 
 ## Defining variables
 
-The keyword `var` tells JavaScript to create a *variable*. A variable is a place in the computer memory that has been set aside to hold whatever we put into it.
+The keyword `var` tells JavaScript to create a *variable*. A variable is a place in the computer memory that has been set aside to hold whatever value we put into it.
+
+A variable can hold one value and one value only. If we put a new value in, any previous value is discarded.
 
 Think of computer memory as a giant wall of mailboxes or pigeon holes. Each box or hole has a label on it -- the variable's name. In the above example, the variable is called `username`.
 
@@ -49,7 +51,19 @@ That said, some are universally accepted, such as `id`.
 
 **Code Smell**: If you find yourself using variables such as `book1`, `book2`, `book3` and so on, you probably want an **Array**. That said, breaking a line into two parts, such as `address1` and `address2` is a notable exception.
 
-## Assigning values to variables
+## Initial Values - `undefined`
+
+When you initialise a variable, the variable is considered to have the value `undefined`. This is a value all variables get before any other value is assigned to them.
+
+```js
+var name;
+console.log(name);
+```
+
+This will output to the console `undefined`.
+
+
+### Assigning values to variables
 
 The `=` is called the *assignment operator*. Try not to think of this as "equals" but "is assigned the value".
 
@@ -76,6 +90,18 @@ Here the method `console.log` is being passed the `username` variable. What is a
 ```js
 console.log("Earl");
 ```
+
+If the value obtained from the variable is changed, the value still in the variable is left unchanged.
+
+## Reference Error: *variable* is not defined
+
+When you attempt to use a variable that hasn't been defined, you may get an error:
+```js
+console.log(chunkyBacon);
+```
+<samp>Error: Uncaught ReferenceError: chunkyBacon is not defined.</samp>
+
+To resolve this, make sure you define the variable in a statement before the line where you use the variable. If you already, *check your spelling* as one of them is probably spelled wrong or inconsistantly.
 
 
 ## Defining multiple variables at once
