@@ -1,14 +1,15 @@
 # Client Side Javascript
-
+**Js should be changed to Javascript throughout**
 JavaScript is the most used programming language in the world - nearly every web page uses JavaScript in some way or another.
 
 ## What does JavaScript do?
 
 JS itself is just a programming language. What that language can do depends on the environment it is being used in.
+
 *Javascript  is a programming language which historically, since its creation in ????, has been used to create event-controlled interaction in web pages. 
 More recently it is also being used server side to interact with databases, read and wwrite files etc. Everything that is currently being performed by languages like PHP, ASP.NET etc*
 
-What that language can do depends on the environment it is being used in.
+
 ### The Web Browser
 
 This book focusses on JS in the web browser. Here, JS is used to add behaviour to a page. This can be as simple as doing something when the page loads, or causing something to happen when different page elements are clicked, dragged, or written into.
@@ -21,18 +22,24 @@ Web pages can be broken into four layers
 4. Behaviours (interactivity, data handling, etc.) – **JavaScript**
 
 JS can also communicate with web servers without having to load the page again. This is called AJAX, which will be covered towards the end of this book.
-
+* Leave this line out  - explain further down in the "where to write JS" section*
 JS can also be tinkered with in the browser's developer console.
 
 ### The Server
 
 JavaScript can also be used on the server through a platform called [node.js](http://nodejs.org). Whole server-side applications can be written in JavaScript. These Node apps can talk to databases, read and write files to disk, even interact with other servers on the internet.
-
+*This Introductory course will not be exploring this aspect
+* Perhaps don't mention the command line environment
 ### Developer's Command Line Environment
 
 When node.js is installed locally, developers can take advantage of plenty of open-source tools to help automate web development. Tools like *grunt* or *gulp* can be set up to automatically process *Sass* or *Less* stylesheets into regular CSS, optimising images, and compressing CSS and JS so they can be downloaded as quickly as possible.
 
+*
 ## Where to write JavaScript
+1. In an HTML script between <script> tags
+2) In a separate file which is referred to in the HTML files eg
+3) When developing, Javascript can be written directly into the "developer console"
+*
 
 ### Developer Console
 
@@ -85,4 +92,4 @@ We can also keep our JavaScript in external files, and include those files on an
 
 In the same way in CSS you want to use `class` attributes over `style` attributes and clearly separating your presentation layer from the document, avoid writing JS in attribute form like this. Keep your behaviour layer separate from your document and presentation layers.
 
-**The Extra Mile**: The attributes `async` and `defer` can give better control over how your code will load.
+**The Extra Mile**: The attributes `async` and `defer` can give better control over how your code will load. * Research and discuss why these options have been provided
