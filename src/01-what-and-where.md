@@ -5,7 +5,10 @@ JavaScript is the most used programming language in the world - nearly every web
 ## What does JavaScript do?
 
 JS itself is just a programming language. What that language can do depends on the environment it is being used in.
+*Javascript  is a programming language which historically, since its creation in ????, has been used to create event-controlled interaction in web pages. 
+More recently it is also being used server side to interact with databases, read and wwrite files etc. Everything that is currently being performed by languages like PHP, ASP.NET etc*
 
+What that language can do depends on the environment it is being used in.
 ### The Web Browser
 
 This book focusses on JS in the web browser. Here, JS is used to add behaviour to a page. This can be as simple as doing something when the page loads, or causing something to happen when different page elements are clicked, dragged, or written into.
