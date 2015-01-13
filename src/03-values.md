@@ -21,7 +21,9 @@ In JavaScript we can work with different values.
 * `1.2308956109358613e+19`
 
 Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*. Floats can contain up to 16 significant figures total, both before and after the decimal point.
+
 * Perhaps a reminder that exponents are not used much in introuctory stages - we don't want to frighten the children *
+
 The `e+01` or `e-01` numbers are exponents: multply the preceding number by this number of powers of ten. JavaScript automatically converts very large numbers to exponents where necessary.
 
 ### Numerical Equivelence
@@ -82,6 +84,9 @@ The statement above is not a valid string. The interpreter will get as far as `"
 SyntaxError: Unexpected identifier.
 ```
 
+*I like the idea of introducing common errors that they will see. When they are relevant, rather than in one lump, although we might have a chapter (appendix?) on debugging where everything is lu ped together??*
+
+
 This is because the JavaScript interpreter doesn't know you mean by an `M` after that second double quote. The 'identifier' this error is referring to is it thinks that M is part of an identifier, such as a variable name or function -- we'll
 
 Syntax in a programming context simply means "the expected structure of statements". Because we've broken the rules of JavaScript's syntax, the error tells us that it is unable to figure out what we meant.
@@ -117,7 +122,9 @@ There are others too.
 * Experiment with putting strings with the `alert()` function, e.g.: `alert("Hello, world!");`. Test it with the escape characters in the table above like `\n` and `\t`.
 
 ## Boolean Values
+
 *Perhaps something more to indicate their great importance, eg all logic being based on if/else*
+
 * `true`
 * `false`
 
