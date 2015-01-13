@@ -21,7 +21,7 @@ In JavaScript we can work with different values.
 * `1.2308956109358613e+19`
 
 Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*. Floats can contain up to 16 significant figures total, both before and after the decimal point.
-
+* Perhaps a reminder that exponents are not used much in introuctory stages - we don't want to frighten the children *
 The `e+01` or `e-01` numbers are exponents: multply the preceding number by this number of powers of ten. JavaScript automatically converts very large numbers to exponents where necessary.
 
 ### Numerical Equivelence
@@ -107,7 +107,7 @@ Using this escaping technique, we can also encode other characters into a string
 There are others too.
 
 **Aside**: In terms of English punctation, the backslash character was invented in 1961 specifically for computing. It was included in ASCII along with the regular forward-leaning slash so up `/\` and `\/` down arrow symbols could be typed.
-
+*Concatenation could be introduced here?*
 ###### Exercises:
 * Enter some of the above strings into your browser's JavaScript console. Be careful to get them right, but also see what happens when you get them wrong.
 * Write these in the console as valid strings. The best answers here will use the least number of characters.
@@ -117,7 +117,7 @@ There are others too.
 * Experiment with putting strings with the `alert()` function, e.g.: `alert("Hello, world!");`. Test it with the escape characters in the table above like `\n` and `\t`.
 
 ## Boolean Values
-
+*Perhaps something more to indicate their great importance, eg all logic being based on if/else*
 * `true`
 * `false`
 
