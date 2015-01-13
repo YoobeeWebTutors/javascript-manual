@@ -1,4 +1,9 @@
 # Statements
+*Brief, but there's not a lot to be said about statements.  I'm not sure about the semi-colon is a colon ... joke.  
+Some of the foreign students have a problem with words like colon, semi-colon, underscore, dash etc, and we might like to provide a 
+appendix which describes them, maybe 5em fonts to make it really obvious.
+?? Where are we going to introduce consol.log() as a (really good) alternative to alert. ??
+*
 
 JavaScript programs are written line by line. Each line, or *statement* is a command to the computer to do one thing.
 
