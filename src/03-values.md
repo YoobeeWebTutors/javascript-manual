@@ -22,9 +22,9 @@ In JavaScript we can work with different values.
 
 Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*. Floats can contain up to 16 significant figures total, both before and after the decimal point.
 
-* Perhaps a reminder that exponents are not used much in introuctory stages - we don't want to frighten the children *
+<!-- Perhaps a reminder that exponents are not used much in introductory stages - we don't want to frighten the children -->
 
-The `e+01` or `e-01` numbers are exponents: multply the preceding number by this number of powers of ten. JavaScript automatically converts very large numbers to exponents where necessary.
+While you may never intentionally use them, you might see numbers ending with `e+01` or `e-01` in some circumstances. These are called *exponents*: multiply the preceding number by this number of powers of ten. JavaScript automatically converts very large numbers to exponents where necessary. Honestly though, you won't see exponents in common use.
 
 ### Numerical Equivelence
 
@@ -83,11 +83,9 @@ The statement above is not a valid string. The interpreter will get as far as `"
 ```
 SyntaxError: Unexpected identifier.
 ```
+<!-- I like the idea of introducing common errors that they will see. When they are relevant, rather than in one lump, although we might have a chapter (appendix?) on debugging where everything is lumped together?? -->
 
-*I like the idea of introducing common errors that they will see. When they are relevant, rather than in one lump, although we might have a chapter (appendix?) on debugging where everything is lu ped together??*
-
-
-This is because the JavaScript interpreter doesn't know you mean by an `M` after that second double quote. The 'identifier' this error is referring to is it thinks that M is part of an identifier, such as a variable name or function -- we'll
+This is because the JavaScript interpreter doesn't know you mean by an `M` after that second double quote. The 'identifier' this error is referring to is it thinks that M is part of an identifier, such as a variable name or function -- we'll talk about these soon.
 
 Syntax in a programming context simply means "the expected structure of statements". Because we've broken the rules of JavaScript's syntax, the error tells us that it is unable to figure out what we meant.
 
@@ -112,7 +110,9 @@ Using this escaping technique, we can also encode other characters into a string
 There are others too.
 
 **Aside**: In terms of English punctation, the backslash character was invented in 1961 specifically for computing. It was included in ASCII along with the regular forward-leaning slash so up `/\` and `\/` down arrow symbols could be typed.
-*Concatenation could be introduced here?*
+
+<!-- Concatenation could be introduced here? -->
+
 ###### Exercises:
 * Enter some of the above strings into your browser's JavaScript console. Be careful to get them right, but also see what happens when you get them wrong.
 * Write these in the console as valid strings. The best answers here will use the least number of characters.
@@ -124,9 +124,11 @@ There are others too.
 
 ## Boolean Values
 
-*Perhaps something more to indicate their great importance, eg all logic being based on if/else*
+Boolean values are very important. Computers work logically and in binary: true and false, 1 and 0, on and off, black and white. There is no 0.5, no almost off, no 'grey' or fuzzy area in this kind of logic.
 
 * `true`
 * `false`
 
-`true` and `false` are called *Boolean logic* values. Booleans are named after 19th-century English mathematician George Boole. His Boolean logic dictates that something logic describes is either true or false, not both or neither, and not somewhere between.
+Boolean values represent a non-numerical logic state. They are called *Boolean logic* values, or just `Booleans`. Booleans are named after 19th-century English mathematician George Boole (hence  why Boolean is always capitalised). His Boolean logic dictates that something logic describes is either true or false, not both or neither, and not somewhere between.
+
+Booleans are extremely useful in programming when it comes to testing for a certain condition. For example, is 12 less than 15? Yes, 12 is less than 15. The answer to questions like this is either true or false. It is never both, neither, fuzzy or unknown.
