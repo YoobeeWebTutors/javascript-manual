@@ -1,11 +1,7 @@
 
 # Variables
 
-<!--Loose values doesn't mean much to noobies. Perhaps introduce DRY here to make the point that a value that is being used frequently can be defined in one place,
-then used over and over = efficiency.  Then we can bring in the idea that a variable can represent more complex things/concepts than just a value.  
-Then you might like to refer to it again when you point out that everything is an opbject in JS-->
-
-Loose values aren't all that useful in day to day programming. A value in one statement is more useful if we can use it in the next statement:
+Values like we saw in the previous chapter aren't all that useful in day to day programming by themselves. A value in one statement is more useful if we can use it in the next statement:
 
 ```js
 var username;
@@ -15,8 +11,7 @@ console.log(username);
 
 ## Defining variables
 
-
-The keyword `var` tells JavaScript to create a *variable*. A variable is a place in the computer memory that has been set aside to hold whatever value we put into it.
+The keyword `var` tells JavaScript to create a *variable*. A variable is a place in the computer memory that has been set aside to hold whatever value (a string, number, Boolean, and others) we put into it.
 
 A variable can hold one value and one value only. If we put a new value in, any previous value is discarded.
 
@@ -43,7 +38,9 @@ By convention, JavaScript programmers use so-called `camelCase` for their variab
 You may also see variables named with `snake_case`, where the whole name is lowercase and words are separated with underscores `_`.
 
 **Best Practice**: Code should always look like it has been written consistantly by a single person, even when written by a team. Use `camelCase` or `snake_case`, but remain consistent. When editing other people's code, obey the conventions you see being followed. "When in Rome, do as the Romans do."
+
 <!-- you can't emphasise clear naming enough - feel free to repeat this frequently -->
+
 Names should be meaningful. Avoid shortenings, abbreviations and acronyms. Don't be clever, be clear:
 
 * `phNum` should be `phoneNumber`
@@ -52,9 +49,9 @@ Names should be meaningful. Avoid shortenings, abbreviations and acronyms. Don't
 
 It's best to use American English spelling where it matches HTML or CSS, most notably the word `color` and not the British "colour".
 
-That said, some are universally accepted, such as `id`.
-<!-- We haven't met arrays yet , and I'm not sure about "Code Smell" - I would use in when talking, but maybe not in writing -->
-**Code Smell**: If you find yourself using variables such as `book1`, `book2`, `book3` and so on, you probably want an **Array**. That said, breaking a line into two parts, such as `address1` and `address2` is a notable exception.
+That said, some are universally accepted, such as `id` for identifier and `i` for iteration.
+
+**Code Smell**: If you find yourself using variables such as `book1`, `book2`, `book3` and so on, you probably want an **Array**, a ordered collection of values. We'll explain arrays later. However, breaking a line into two parts, such as `address1` and `address2` is a notable exception.
 
 ## Initial Values - `undefined`
 
@@ -74,6 +71,7 @@ The `=` is called the *assignment operator*. Try not to think of this as "equals
 
 ```js
 username = "Earl";
+age = 27;
 ```
 
 Here, `username` is assigned the value `"Earl"`
@@ -82,18 +80,24 @@ We can also assign a value to a variable when it is defined.
 
 ```js
 var username = "Earl";
+var age = 27;
+var canDrive = true;
 ```
 
 ## Using variables as values
 
 ```js
 console.log(username);
+console.log(27);
+console.log(canDrive);
 ```
 
 Here the method `console.log` is being passed the `username` variable. What is actually taking place here is the value inside `username` is being *evaluated* to its value before being passed into `console.log`:
 
 ```js
 console.log("Earl");
+console.log(27);
+console.log(true);
 ```
 <!-- we haven't mentioned the idea that variables can be changed yet. Perhaps some exercises at this point to show the sorts of things we can do with them - eg concatenation -->
 If the value obtained from the variable is changed, the value still in the variable is left unchanged.
@@ -105,8 +109,8 @@ When you attempt to use a variable that hasn't been defined, you may get an erro
 console.log(chunkyBacon);
 ```
 <samp>Error: Uncaught ReferenceError: chunkyBacon is not defined.</samp>
-<!-- BEST PRACTICE -->
-To resolve this, make sure you define the variable in a statement before the line where you use the variable. If you already, *check your spelling* as one of them is probably spelled wrong or inconsistantly.
+
+*Best Practice*: To resolve this, make sure you define the variable in a statement before the line where you use the variable. If you already, *check your spelling* as one of them is probably spelled wrong or inconsistently.
 
 
 ## Defining multiple variables at once
@@ -122,5 +126,6 @@ var john, paul, george, ringo;
 ```js
 var coach, captain, teamName;
 var waterboy = "Bobby";
+var score = 2;
+var winning = true;
 ```
-<!-- You have only mentioned variables that are strings.  We should probably broach the subject of numbers at least at this point, perhaps even a list of all the various types with a hint about which will be covered at what point in the near future -->

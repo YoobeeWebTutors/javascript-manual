@@ -147,6 +147,30 @@ Because the order of operations is hard to memorise, its best to be explicit wit
 * `9 + (9 * 9)` -> 90 – here the parentheses are optional, but document the intent.
 * `(9 + 9) * 9` -> 162 – parentheses are required to override default order of operations
 
+## Documenting Values with Variables
+
+Sometimes when writing a calculation, you may want to multiply one number with another.
+
+```js
+var quantity = 2;
+var total = quantity * 9;
+```
+
+*Bad Practice*: The `9` here is referred to as a *magic number* – it's unclear what it actually represents. Maybe you've figured out that `9` is the unit price, but you had to think about it, didn't you.
+
+*Best Practice*: Document what a value is by putting it in a variable. We'll also make sure that it's clear we're calculating a price and not a unit total This makes for very readable code:
+
+```js
+var unitPrice = 9;
+var quantity = 2;
+var totalPrice = quantity * unitPrice;
+```
+*Best Practice*: By putting numbers we use multiple times in a variable, we can keep that value in one place. This builds maintainable code: if the unitPrice changes in the future, we only need to change it in one place.
+
+*Aside*: Variables that aren't supposed to be changed while the program is running are called *Constants*. The value in the variable should stay the same.
+
+Some languages have syntax to declare the variable as read-only, JavaScript does not. If you mean for a variable to be treated as a constant, type it in ALLCAPS as a sign to yourself and others that this variable should not be modified by the program. Using this formatting isn't always necessary, but it's an established pattern you will see in other's published code.
+
 # Example
 
 ## Coffee Cup Calculator
