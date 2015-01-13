@@ -120,6 +120,7 @@ There are others too.
   * 'Bob's requested, "Please don't say goodbye"', said Alice.
   * "I'll take 1/3 of the prize pool", he said proudly.
 * Experiment with putting strings with the `alert()` function, e.g.: `alert("Hello, world!");`. Test it with the escape characters in the table above like `\n` and `\t`.
+* Try using `console.log()` instead of `alert()`. What's the difference?
 
 ## Boolean Values
 

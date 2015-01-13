@@ -1,9 +1,4 @@
 # Statements
-*Brief, but there's not a lot to be said about statements.  I'm not sure about the semi-colon is a colon ... joke.  
-Some of the foreign students have a problem with words like colon, semi-colon, underscore, dash etc, and we might like to provide a 
-appendix which describes them, maybe 5em fonts to make it really obvious.
-?? Where are we going to introduce consol.log() as a (really good) alternative to alert. ??
-*
 
 JavaScript programs are written line by line. Each line, or *statement* is a command to the computer to do one thing.
 
@@ -19,7 +14,8 @@ The text of the program is interpreted by the browser's JavaScript engine, or th
 
 Each statement in the program ends with a semi-colon or `;`. This helps JavaScript's interpreter to know where one statement begins and another ends.
 
-**Aside**: Know your punctuation: A semi-colon `;` is a colon `:` 'that has been run over by a semi truck -- it's been squished a bit.
+**Aside**: Know your punctuation: Here's a word-picture to help your memory: A semi-colon `;` is a colon `:` 'that has been run over by a semi-trailer truck -- it's been squished a bit.
+<!-- Figure: Some of the foreign students have a problem with words like colon, semi-colon, underscore, dash etc. Present side by side in 5em fonts to make it really obvious. -->
 
 **Best Practice**: One statement per line of code. Because of this, the terms statement and line are used interchangeably.
 
