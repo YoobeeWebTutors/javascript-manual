@@ -4,7 +4,7 @@ We can define our own functions that we can call elsewhere in our own program:
 
 ```js
 function hello (person) {
-  alert("Hello, " + person + "!");
+  console.log("Hello, " + person + "!");
 }
 
 hello("Dolly");
@@ -13,19 +13,64 @@ hello("World");
 
 Here the function `hello` is being defined. The keyword `function` here is kind of like `var` in that it's creating a variable where the function will live. The function's name is `hello`, so the function will live in the `hello` variable, so we can use it later.
 
+## Parameters
+
 The `hello` function is followed a space and parentheses. This normally calls a function, but because the keyword `function` is being used, it will be used as part of defining the function. The name `person` here is actually a variable that will be usable inside the new function. The value of this variable will be the first value passed into the function as an argument. The space before the parentheses is optional, but including it further reinforces to the reader that it is not a call but a declaration.
 
 The `{ }` *curly braces* here create a group of statements, called a *block*. The statements contained within will become the body of the function.
+
+### Optional Parameters
+
+Sometimes, a function will only want a parameter some of the time. If the function is not provided a value for a parameter, the capturing variable will be `undefined`.
+
+```js
+function hello (person) {
+  person = person || "world";
+  console.log("Hello, " + person + "!");
+}
+
+hello("Dolly"); // "Hello, Dolly!"
+hello();        // "Hello, world!"
+```
+
+Here, the Boolean operator for Logical OR serves as a *default operator*. Technically, the `||` operator will return the first operand if it's truthy, otherwise it returns the second operand. This behaviour is called *short-circuiting* — `&&` and `||` don't actually bother looking at the second operand if the first operand is enough.
+
+When the first parameter is not provided to `hello()`, `person` is set to `undefined`, and `undefined` is falsy, so `||` returns `"world"`.
+
+Also note that we don't have to use `var person` here. Because `person` is used inside the parentheses in the function definition, the variable is declared and initialised for us.
+
+## Return Values
+
+Usually, a function will return a value for use in the code where the function was invoked. To make functions that provide this value back to its caller, we use the `return` keyword in a statement:
+
+```js
+function giveMeALetter(letter) {
+  return letter + "!";
+}
+giveMeALetter("A"); // returns "A!"
+```
+
+When JavaScript executes a `return` statement, it will stop working through the function and return to the code that called the function. No other code inside the function after the `return` statement will execute.
+
+```js
+function meaningOfLife() {
+  console.log("You will see this.");
+  return 42;
+  console.log("You will never see this.");
+}
+```
+
+*Aside*: While we recommend you always use semi-colons at the end of statements, even though they are optional in JavaScript, JavaScript's Automatic Semi-colon Insertion is the weakest around `return` statements and can cause problems if you omit them.
 
 ## What makes a good function?
 
 A function should do one thing only. As a guideline, functions that are more than five statements long should probably be broken up into smaller functions.
 
-A function should be named well. It should do what it says on the label.
+A function should be named well. It should do what it says on the label. This builds *self-documenting code*.
 
 A function should behave reliably. When given input, it should give the same output each time. Except when you intend it to behave randomly, as you might want in a video game.
 
-A function should
+If a function returns a value, it should not (strictly speaking) have 'side effects' – it should not change any variables outside its scope, or create output.
 
 # Example: Calculator
 
@@ -120,37 +165,64 @@ This function accepts three values as *parameters*
 Much better! Our code is much more maintainable. If we want to change the output message, we can do it in one place.
 
 
-## Variable Scope
+# Variable Scope
 
 In the coffee calculator above, you may notice that the statement inside the `calculateCoffeeTotal` function uses a variable that is not defined inside the function. This function is taking advantage of something called *variable scope*. `calculateCoffeeTotal` is a global variable as it is not defined inside a function.
 
-In JavaScript, variables are scoped to functions. Variables defined inside functions are only accessible
+In JavaScript, variables are scoped to functions. Variables defined inside functions are said to be *locally scoped*, and are only accessible to code written within that function, even to functions defined within that function.
 
 Variables not declared in any function are said to be *global scoped*. This means the variable can be accessed from anywhere. This might sound great, but it is considered bad practice to define global variables.
 
 To see why global variables are bad, consider this example. On a typical web page you may have many different  JavaScript programs running. If these programs used global variables, they may unintentionally use the same variable names as each other. This means one variable could be being shared across more than one programs. If one program overwrites such a variable, the other program will use the unintended value, which is bad.
 
-### Using a globally-scoped variable
+## Globally-Scoped Variables
 ```js
 var greeting = "hello";
+console.log(greeting);
 
 function greet () {
-  alert(greeting);
+  console.log(greeting);
 }
 
 greet();
-alert(greeting)
 ```
 
 Because `greeting` is declared outside or the `greet` function, the function has access to it.
 
 
-### Using a function-scoped variable
+## Locally-Scoped Variables
 ```js
 function greet () {
-  var greeting = "hello"
-  alert ("hello");
+  var greeting = "hello";
+  console.log(greeting);
 }
 
 greet();
+console.log(greeting); // gives uncaught ReferenceError: greeting is not defined.
 ```
+In the code above, the variable `greeting` only exists inside the `greet()` function. When the function ends, the variable does not remain usable outside the function.
+
+## Locally-scoped Variables Obscure Globally-scoped Variables
+```js
+var message = "bye"
+
+function goodbye () {
+  var message = "farewell";
+  console.log(message);
+}
+
+goodbye();
+console.log(message);
+```
+In this code, there are two variables called `message`. One is globally scoped, one is scoped to `goodbye()`. They both contain different values.
+
+Because a `message` variable is being declared inside `goodbye()`, it obscures access to the global `message`.
+
+Obscuring is not normally a problem: reusing variable names is normally fine, but if they do conflict with global variables you will have problems.
+
+# Exercises
+
+* Write a function that returns the input string with French « guillemets » around it. These are not two angle brackets together, but one character.
+* Write a function that returns the input string surrounded with Spanish exclamation marks around it: ¡Arriba! ¿Se puede hacer otra con signos de interrogación españoles?
+* Write a function that takes one number as a parameter, calculates GST, and returns the original number including GST. Write code that uses the function to demonstrate that it works.
+* Write a function that takes a number including GST and returns the number excluding GST.

@@ -2,7 +2,7 @@
 
 Functions are like smaller programs within your larger program, and are sometimes referred to as *subroutines*.
 
-Functions wrap a set of statements that work together to compute one piece of output.
+Functions wrap a set of statements that work together, usually to compute one piece of output.
 
 Those functions usually work with some input given to them.
 
@@ -10,7 +10,7 @@ Functions are essentially a variable that stores a function object.
 
 ## Calling a function
 
-We can invoke a function, by *calling* it. A function call looks like this:
+We can invoke or execute a function, by *calling* it. A function call looks like this:
 
 * `alert()`
 

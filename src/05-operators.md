@@ -265,3 +265,10 @@ Write a new program for each of these points below. Each program should output w
 
 * GST is 15%. To add GST to a number, multiply it by 1.15. Duplicate your first bagel program to calculate and output the exclusive and inclusive GST prices.
 * Getting the GST amount for an inclusive number is slightly harder: Multiply the inclusive price by 3 and divide by 23. Write a program that accepts a number including GST and output the amount of tax added on, as well as the number excluding tax.
+
+# Research
+* Weirdly, in JavaScript, `0.1 + 0.2` does not give you `0.3`.
+  * What does JavaScript calculate it to be?
+  * Why is the computer doing this?
+  * How could this affect your calculations?
+  * What should programmers do to avoid this kind of error?
