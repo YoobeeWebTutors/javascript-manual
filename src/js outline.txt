@@ -16,6 +16,14 @@
 	- alert() confirm() prompt()
 	- parseInt(n, radix)
 	- parseFloat(n)
+	- functions
+		- invoking functions - calling
+		- defining functions
+		- function input - parameters/arguments
+			- option = option || "default"; // using || as default operator
+		- function output - return
+		- function scope - functions can access variables defined outside of themselves
+			- var inside functions limits a variable to only exist inside that function when it is called.	
 	- control statements
 		- if
 		- if .. else
@@ -69,14 +77,6 @@
 		- pattern.test(string)
 		- string.match(pattern)
 		- string.replace(pattern)
-	- functions
-		- invoking functions - calling
-		- defining functions
-		- function input - parameters/arguments
-			- option = option || "default"; // using || as default operator
-		- function output - return
-		- function scope - functions can access variables defined outside of themselves
-			- var inside functions limits a variable to only exist inside that function when it is called.
 	- DOM
 		- document.getElementById("contact-form")
 		- document.getElementsByName("p")

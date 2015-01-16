@@ -34,3 +34,44 @@ The program cannot go to the next line of code until the current line finishes e
 **Best Practice**: Reliability: Programs should always do the same thing each time they are run. Some programs may be coded to act randomly, but they should always react the same way to that randomness.
 
 **Best Practice**: Even though JavaScript treats these semi-colons as optional, always put them in. Doing so avoids [Automatic Semi-colon Insertion (ASI)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) issues.
+
+**Best Practice**: To JavaScript, a statement can be as many characters long as it needs to be, but to programmers longer lines are harder to read. Try not to make a line longer than 80 characters, and certainly not longer than 120.
+
+## Comments
+
+Comments are lines of code that don't do anything. We use them to leave comments to other coders when they read this code in the future. Usually this is yourself, and yes, you'll always be a different coder in the future.
+
+```js
+// one line comment
+alert(10); // pieces of fruit available
+```
+
+*Best Practice*: Comments are very useful for documenting, but code should be self-documenting where possible. As we go along, we'll learn better ways to document our code than with comments.
+
+We can also comment out lines we don't need for the moment, while we get something to work. It's best to actually remove commented out code before you share it on a version control system, such as Git.
+
+```js
+// alert("You'll never see this unless you uncomment it");
+```
+
+There are also block comments. These are best for longer documentation.
+```js
+/* Longer comments can be written
+that span over many lines
+by using block comments */
+
+/**
+* This style of comment is called a DocBlock, and is often found
+* in larger projects to serve as documentation for the thing that follows it.
+* JavaScript just sees a fancy block comment, but other tools will see the
+* asterisks and read the text and metadata in it and generate helpful books or
+* popups for you.
+*
+* @returns Boolean
+*/
+function doAThing() {
+  return true;
+}
+```
+
+Don't be surprised if you come back to some code you wrote six months later and say to yourself, "What was I thinking? How is this code even working? Surely I can do better now!"
