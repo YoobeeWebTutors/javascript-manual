@@ -50,7 +50,7 @@ Comparison operators are especially for numbers. While you can use them for stri
 
 # Logical Operators
 
-We covered `&&` (Logical AND), `||` (Logical OR) and `!` (Logical NOT) previously, but conditions are where these operators shine.
+We covered `&&` (Logical AND), `||` (Logical OR) and `!` (Logical NOT) previously, but conditions are where these operators shine. They combine the Boolean value from other conditions.
 
 ```js
 // Fruit Inventory
@@ -64,3 +64,26 @@ console.log(apples > cherries && apples < bananas);
 console.log(apples > 1 || bananas > 1 || cherries > 1); // true
 console.log(! shopOpen); // false
 ```
+
+## Checking against a set of values
+
+Note that we have to use the logical operator to separate two discreet conditions. You can do the following, but it won't do what you want it to:
+```js
+console.log(name === "Felix" || "Ralph"); // Always true, no matter the value in name.
+```
+The first condition is `name === "Felix"`, which could be `true` or `false`.
+
+The other condition is just `"Ralph"`, which by itself is a non-empty string, which is coerced to `true`.
+
+So you must check the variable for equality with each string: `name === "Felix"` and `name === "Ralph"`. The equality operator `===` along with both of its operands must be present for each condition.
+
+Because a variable cannot contain both `"Felix"` and `"Ralph"`, using `&&` will not help us. Using `||` between the two conditions will tell us if the variable contains either of the strings.
+
+```js
+// Name checker
+var name = "Bob";
+console.log(name === "Felix" || name === "Ralph"); // false
+console.log(name !== "Felix" && name !== "Ralph"); // true
+```
+
+As the list of names you want gets longer, other solutions are needed, such as Arrays, which will be covered later.

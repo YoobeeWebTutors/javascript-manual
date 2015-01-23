@@ -23,13 +23,14 @@
 			- option = option || "default"; // using || as default operator
 		- function output - return
 		- function scope - functions can access variables defined outside of themselves
-			- var inside functions limits a variable to only exist inside that function when it is called.	
+			- var inside functions limits a variable to only exist inside that function when it is called.
 	- control statements
 		- if
 		- if .. else
 		- if .. else if .. else
 			- ||, &&, !, !!
 		- switch .. case .. break .. default
+	- loops
 		- do .. while
 		- while ..
 		- for ..
