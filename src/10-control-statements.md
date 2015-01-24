@@ -76,16 +76,109 @@ if (username === "Emmet" || username === "Lucy") {
 You can even check additional conditions if the first was false.
 
 ```js
-if (username === "Emmet") {
-  alert("Everything is awesome, Emmet!");
-} else if (username === "Lucy") { // username is not Emmet, check another condition
-  alert("Welcome back, Wyldstyle");
-} else { // username is not Emmet and it's not Lucy.
-  alert("Thank you for following the instructions.");
+if (age < 1) {
+  console.log("infant");
+} else if (age < 2) {
+  console.log("toddler");
+} else if (age < 13) {
+  console.log("child");
+} else if (age < 16) {
+  console.log("adolescent");
+} else {
+  console.log("adult");
 }
 ```
+## `else` the anti-pattern
+
+Often times you might write something like above, but a little refactoring can make this much easier to read and maintain. We can put the logic in a function and eliminate the `else`s:
+
+```js
+function ageNoun (age) {
+  if (age < 1) return "infant";
+  if (age < 2) return "toddler";
+  if (age < 13) return "child";
+  if (age < 16) return "adolescent";
+  return "adult";
+}
+console.log(ageNoun(age));
+```
+
+Remember, return ends the function, so none of the following statements will be executed.
+
+`if` statements are only looking for one statement after their condition. If that's one statement or one block of statements, that's okay.
+
 
 # Nested `if` Statements
 
+You can even put `if`s inside other `if`s, or inside functions.
+
+```js
+function genderNoun(gender, age) {
+  var adultAge = 16;
+  if (gender === "f") { // female
+    if (age > adultAge) {
+      return "woman";
+    } else {
+      return "girl";
+    }
+  } else { // male
+    if (age > adultAge) {
+      return "man";
+    } else {
+      return "boy";
+    }
+  }
+}
+```
+
+Some would probably say this is a border-line example of too much indentation. Breaking each nested `if` into its own function and eliminating the `else` is decidedly more readable and maintainable. The function names help document the intent of the code.
+
+```js
+var adultAge = 16;
+function genderNoun(gender, age) {
+  if (gender === "f") {
+    return femaleAgeNoun(age);
+  }
+  return maleAgeNoun(age);
+}
+
+function maleAgeNoun(age) {
+  if (age > adultAge) {
+    return "man";
+  }
+  return "boy";
+}
+
+function femaleAgeNoun(age) {
+  if (age > adultAge) {
+    return "woman";
+  }
+  return "girl";
+}
+```
 
 # `switch`
+Sometimes a stack of `if` statements is not the best for maintainability or readability.
+
+```js
+switch(name) {
+  case "Emmet":
+    console.log("Everything is Awesome!");
+    break;
+  case "Lucy":
+    console.log("Welcome, Wyldstyle.");
+    break;
+  default:
+    console.log("Hello, citizen.");
+}
+```
+
+Here, depending on the value of `name` and its equality with the values on each of the `case` statements, the code after that `case` will be executed.
+
+Because we don't usually want all the code after that `case` statement to be run, such as the code after the next `case` statement, we use `break` to drop out of the `switch`'s block.
+
+*Best Practice*: Always use a `break`. If you don't want a break, group cases together, or if you mean to have an uncommon 'fall-through', comment `// no break` so you know the fall-through is intentional.
+
+`default` is a case that catches anything that doesn't match any of the `case` values.
+
+# Exercises

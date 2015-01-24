@@ -13,11 +13,34 @@ hello("World");
 
 Here the function `hello` is being defined. The keyword `function` here is kind of like `var` in that it's creating a variable where the function will live. The function's name is `hello`, so the function will live in the `hello` variable, so we can use it later.
 
-## Parameters
+## Formatting
 
-The `hello` function is followed a space and parentheses. This normally calls a function, but because the keyword `function` is being used, it will be used as part of defining the function. The name `person` here is actually a variable that will be usable inside the new function. The value of this variable will be the first value passed into the function as an argument. The space before the parentheses is optional, but including it further reinforces to the reader that it is not a call but a declaration.
+The `hello` function is followed a space and parentheses. The parentheses form the *parameter declaration*: what variables will be used to capture values passed to the function.
 
 The `{ }` *curly braces* here create a group of statements, called a *block*. The statements contained within will become the body of the function.
+
+## Coding Style and Indentation
+
+Coding style varies from language to language. JavaScript doesn't really mind where we put some symbols -- white space and line breaks are pretty much ignored by JavaScript. We humans however find them very useful.
+
+There are many popular 'coding guides', but we will teach you the most common, often called 1TCS or One True Coding Style.
+
+Different teams and projects use different styles for different languages. HTML will have one, CSS another, JavaScript yet another.
+
+Curly braces are usually placed one space after the parameter parentheses to open, and on a line by itself to close. The closing bracket should be in the same column as the first character of the function declaration.
+
+In the same way you indent HTML and CSS, we indent code. To make it clear what lines belong to what block, we indent them a level. Every line that belongs to a block should begin at the same column.
+
+Usually we press the <kbd>tab</kbd> key to indent a line. Different editors treat this differently by default.
+
+Some editors type hard tabs: the control character Horizontal Tab (ASCII code 9, `\t`). This traditionally has been rendered as eight spaces, the same as typewriters would. Some editors will type soft-tabs, substituting `\t` for eight, four or two actual space characters. Most editors will allow for both, letting you change the setting in the application's preferences.
+
+As a programmer, your job is to learn the style being used in the code you are working on and work to it. Good code looks like it was written completely by one person, even though this is rarely the case.
+
+## Parameters
+
+This normally calls a function, but because the keyword `function` is being used, it will be used as part of defining the function. The name `person` here is actually a variable that will be usable inside the new function. The value of this variable will be the first value passed into the function as an argument. The space before the parentheses is optional, but including it further reinforces to the reader that it is not a call but a declaration.
+
 
 ### Optional Parameters
 
