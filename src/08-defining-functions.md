@@ -1,3 +1,9 @@
+<!-- SY27/1/15
+
+This one is really starting to show the need for a glossary.  I'm thinking about the first-time readers here, and the unfamiliar terms that might have been mentioned once or twice but not necessarily absorbed as basic vocab yet.
+
+
+
 # Defining Custom Functions
 
 We can define our own functions that we can call elsewhere in our own program:
@@ -20,10 +26,13 @@ The `hello` function is followed a space and parentheses. The parentheses form t
 The `{ }` *curly braces* here create a group of statements, called a *block*. The statements contained within will become the body of the function.
 
 ## Coding Style and Indentation
-
+<!-- SY 27/1/15
+I think we should show an example of a simple, but uncommented and badly indented function alongside a properly commented and well laid out one.  The Don't Make Me Think approach to coding
+-->
 Coding style varies from language to language. JavaScript doesn't really mind where we put some symbols -- white space and line breaks are pretty much ignored by JavaScript. We humans however find them very useful.
 
 There are many popular 'coding guides', but we will teach you the most common, often called 1TCS or One True Coding Style.
+<!-- SY 27/1/15 - Links to online resources here -->
 
 Different teams and projects use different styles for different languages. HTML will have one, CSS another, JavaScript yet another.
 
@@ -33,18 +42,30 @@ In the same way you indent HTML and CSS, we indent code. To make it clear what l
 
 Usually we press the <kbd>tab</kbd> key to indent a line. Different editors treat this differently by default.
 
+<!-- SY 27/1/15
+Perhaps some hints about how to set this up in Sublime at least. 
+-->
+
 Some editors type hard tabs: the control character Horizontal Tab (ASCII code 9, `\t`). This traditionally has been rendered as eight spaces, the same as typewriters would. Some editors will type soft-tabs, substituting `\t` for eight, four or two actual space characters. Most editors will allow for both, letting you change the setting in the application's preferences.
+<!-- SY 27/1/15  
+Perhaps we should provide some examples of different styles - maybe in an aside or an appendix 
+-->
 
 As a programmer, your job is to learn the style being used in the code you are working on and work to it. Good code looks like it was written completely by one person, even though this is rarely the case.
 
 ## Parameters
-
+<!-- SY 27/1/15
+Unclear what this means -->
 This normally calls a function, but because the keyword `function` is being used, it will be used as part of defining the function. The name `person` here is actually a variable that will be usable inside the new function. The value of this variable will be the first value passed into the function as an argument. The space before the parentheses is optional, but including it further reinforces to the reader that it is not a call but a declaration.
 
 
 ### Optional Parameters
 
 Sometimes, a function will only want a parameter some of the time. If the function is not provided a value for a parameter, the capturing variable will be `undefined`.
+<!-- Sy 27/1/15
+Explain what this will do before showoing the example
+-->
+
 
 ```js
 function hello (person) {
@@ -63,6 +84,11 @@ When the first parameter is not provided to `hello()`, `person` is set to `undef
 Also note that we don't have to use `var person` here. Because `person` is used inside the parentheses in the function definition, the variable is declared and initialised for us.
 
 ## Return Values
+<!-- SY 27/1/15 
+
+What are the other options for a function - what else can they do if they are not returning something
+-->
+
 
 Usually, a function will return a value for use in the code where the function was invoked. To make functions that provide this value back to its caller, we use the `return` keyword in a statement:
 
@@ -126,6 +152,12 @@ Note that we don't use var to redeclare the variables, as they are already defin
 
 Hopefully you can see here that this will work, but at the cost of making our code harder to maintain. We've duplicated code. Our calculation is now in two different places. Our `pricePerCoffee` is set twice. And our output string is duplicated too.
 
+<!-- SY 27/1/15
+BIG EMPHASIS 
+This is a fundamental BEST PRACTICE and needs to be explained, emphasised and explained again. At least make this very bold and clear.  
+It does become apparent in the following  paragraphs but we need to make them want to NEVER repeat themselves, or at least to notice when have they done so as a trigger to improve their code to get around it
+-->
+
 **Best Practice**: D.R.Y. — Don't Repeat Yourself
 D.I.E. — Duplication Is Evil
 
@@ -187,6 +219,14 @@ This function accepts three values as *parameters*
 
 Much better! Our code is much more maintainable. If we want to change the output message, we can do it in one place.
 
+<!-- 27/1/15
+What is 'scope"?
+Why do we have different 'scopes'
+My initial explanation is along the lines of 'We like to give precise and unmistakeable directions to computers because they are not actually all that clever. Controlling the scope is one way to help this process'.
+
+Would you want to introduce the notion of namespacing at this point, even simplistically with a hint that it something they will come across in more advanced programming?
+
+-->
 
 # Variable Scope
 
@@ -244,7 +284,9 @@ Because a `message` variable is being declared inside `goodbye()`, it obscures a
 Obscuring is not normally a problem: reusing variable names is normally fine, but if they do conflict with global variables you will have problems.
 
 # Exercises
-
+<!-- SY 27/1/15
+I like these.  They will have to think for themselves
+-->
 * Write a function that returns the input string with French « guillemets » around it. These are not two angle brackets together, but one character.
 * Write a function that returns the input string surrounded with Spanish exclamation marks around it: ¡Arriba! ¿Se puede hacer otra con signos de interrogación españoles?
 * Write a function that takes one number as a parameter, calculates GST, and returns the original number including GST. Write code that uses the function to demonstrate that it works.
