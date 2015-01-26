@@ -1,5 +1,35 @@
 # Functions
 
+<!--  SY 27/1/15
+ you may well get into these points in later chapters, but these  have spring to mind while I'm reading this for the first time
+ 
+naming conventions ? 
+Why do we write functions?
+When do we use them?
+Where do we write them?
+How does our web page get hold of them?
+What is a parameter, or an argument, and when should we use each term?
+What is "return" and how do we use it?  - 
+
+A very good coding mate who used to come along to the PHP group we had here years ago described his functions as "storing his genius". 
+He said he used to go into an almost trance like state while writing them, usually late at night, then in the morning be quite surprised by how clever he had been.
+
+We should also strongly emphasise the absolute necessity of good clear naming conventions (self-commenting identifiers) and of commenting all except the simplest and clearly named functions with
+a) the overall picture
+b) the parameters that are requires
+3) what is returned
+
+I also insist that the students write their pseudocode in comments above any function they are working on - they can eliminate them when everything is perfect - but their comments should make the intention of the function perfectly clear
+so that all that any other programmer has to do is read the comment and confirm that the code does what is intended.  They should never have to work it out for themselves.
+Excessive commenting is discouraged, and comments should only appear inside a function to clarify - and then preferably on the same line, tabbed over
+
+I also like to point out that this is how programmers improve their code. They can produce a function that does something, and then improve on it without having to re-write any of the code that calls it.  
+EG I provide them with an adequate example of, eg a checkEmail(), then challenge them to apply kaizen until they are happy with it, to encourage them to find their own best practices.  
+Perhaps you could provide an example of this process.
+
+-->
+
+
 Functions are like smaller programs within your larger program, and are sometimes referred to as *subroutines*.
 
 Functions wrap a set of statements that work together, usually to compute one piece of output.
@@ -75,7 +105,11 @@ The `console` object is a built-in object for your program to interact with the 
 #### console.log( *message*, [...] );
 
 This outputs values to the developer console panel. Note that different browsers output different values differently. For example, Chrome and Firefox will colour strings and numbers differently, but Firefox shows quotes around strings while Chrome does not.
+<!--   SY 27/1/15
+I've never used these - thanks
 
+There's no useful feature like PHP's __LINE__  or __FILE__ to automatically place the line number in a console.log is there?  
+-->
 #### console.info( *message*, [...] );
 #### console.warn( *message*, [...] );
 #### console.error( *message*, [...] );
