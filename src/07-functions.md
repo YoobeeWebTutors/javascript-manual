@@ -107,8 +107,7 @@ The `console` object is a built-in object for your program to interact with the 
 This outputs values to the developer console panel. Note that different browsers output different values differently. For example, Chrome and Firefox will colour strings and numbers differently, but Firefox shows quotes around strings while Chrome does not.
 <!--   SY 27/1/15
 I've never used these - thanks
-
-There's no useful feature like PHP's __LINE__  or __FILE__ to automatically place the line number in a console.log is there?  
+  
 -->
 #### console.info( *message*, [...] );
 #### console.warn( *message*, [...] );
