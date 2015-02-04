@@ -1,4 +1,9 @@
 # Control Statements
+<!-- SY 5/2 This is good.  More exercises in switch case would be good, comparing them to if elses.  
+
+There's a funny article that I can't find right now about if code had been invented by the English
+perchance this is true, notwithstanding this circumstance, etc.  It's actually helped some people understand what programmers are on about
+-->
 
 Up until this chapter our programs have been simple in that they are just a series of statements that all get executed one at a time in sequence.
 
@@ -132,6 +137,7 @@ function genderNoun(gender, age) {
 ```
 
 Some would probably say this is a border-line example of too much indentation. Breaking each nested `if` into its own function and eliminating the `else` is decidedly more readable and maintainable. The function names help document the intent of the code.
+<!--  a best practice guideline here would be useful -->
 
 ```js
 var adultAge = 16;
