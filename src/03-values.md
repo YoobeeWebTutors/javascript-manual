@@ -22,8 +22,6 @@ In JavaScript we can work with different values.
 
 Numbers in JavaScript can be whole numbers, called *integers* or have decimal places, called *floating point numbers* or just *floats*. Floats can contain up to 16 significant figures total, both before and after the decimal point.
 
-<!-- Perhaps a reminder that exponents are not used much in introductory stages - we don't want to frighten the children -->
-
 While you may never intentionally use them, you might see numbers ending with `e+01` or `e-01` in some circumstances. These are called *exponents*: multiply the preceding number by this number of powers of ten. JavaScript automatically converts very large numbers to exponents where necessary. Honestly though, you won't see exponents in common use.
 
 ### Numerical Equivelence

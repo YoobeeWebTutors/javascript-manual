@@ -1,5 +1,3 @@
-<!-- This is very good.  I've been wondering if we should have a "References" section at the bottom pointing students to other resources eg JS Novice to Ninja and others,
-and  to our favourite web resources as well ?? -->
 # Operators
 
 What can we do with values? Make new values from old ones. These are called *operations*.

@@ -136,7 +136,7 @@ function genderNoun(gender, age) {
 }
 ```
 
-Some would probably say this is a border-line example of too much indentation. Breaking each nested `if` into its own function and eliminating the `else` is decidedly more readable and maintainable. The function names help document the intent of the code.
+Some programmers would say this is a border-line example of too much nesting. Breaking each nested `if` into its own function and eliminating the `else` is decidedly more readable and maintainable. The function names help document the intent of the code.
 <!--  a best practice guideline here would be useful -->
 
 ```js
@@ -162,6 +162,8 @@ function femaleAgeNoun(age) {
   return "girl";
 }
 ```
+***Best Practice***: Deeply nested `if`s are a sure *code smell* that your code needs refactoring into functions.
+
 
 # `switch`
 Sometimes a stack of `if` statements is not the best for maintainability or readability.

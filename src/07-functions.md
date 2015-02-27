@@ -2,16 +2,16 @@
 
 <!--  SY 27/1/15
  you may well get into these points in later chapters, but these  have spring to mind while I'm reading this for the first time
- 
-naming conventions ? 
+
+naming conventions ?
 Why do we write functions?
 When do we use them?
 Where do we write them?
 How does our web page get hold of them?
 What is a parameter, or an argument, and when should we use each term?
-What is "return" and how do we use it?  - 
+What is "return" and how do we use it?  -
 
-A very good coding mate who used to come along to the PHP group we had here years ago described his functions as "storing his genius". 
+A very good coding mate who used to come along to the PHP group we had here years ago described his functions as "storing his genius".
 He said he used to go into an almost trance like state while writing them, usually late at night, then in the morning be quite surprised by how clever he had been.
 
 We should also strongly emphasise the absolute necessity of good clear naming conventions (self-commenting identifiers) and of commenting all except the simplest and clearly named functions with
@@ -37,6 +37,8 @@ Functions wrap a set of statements that work together, usually to compute one pi
 Those functions usually work with some input given to them.
 
 Functions are essentially a variable that stores a function object.
+
+This chapter focuses on using functions. Writing our own functions is described in the next chapter.
 
 ## Calling a function
 
@@ -105,15 +107,12 @@ The `console` object is a built-in object for your program to interact with the 
 #### console.log( *message*, [...] );
 
 This outputs values to the developer console panel. Note that different browsers output different values differently. For example, Chrome and Firefox will colour strings and numbers differently, but Firefox shows quotes around strings while Chrome does not.
-<!--   SY 27/1/15
-I've never used these - thanks
-  
--->
+
 #### console.info( *message*, [...] );
 #### console.warn( *message*, [...] );
 #### console.error( *message*, [...] );
 
-These functions share the same *signature* as `console.log`, but act differently from each other. Depending on the browser, they might colour the output differently or put an icon next to the output in order to help you determine how important the output might be.
+These functions share the same *signature* as `console.log`, but create different output. Depending on the browser, these functions might colour the output or put an icon next to the output. When writing complicated programs, this can help you differentiate your messages from one another.
 
 `console.info` is for informative output, a 'heads up' that something expected happened.
 

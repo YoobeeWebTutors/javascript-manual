@@ -2,10 +2,9 @@
 
 A condition is like a calculation but returns a Boolean `true` or `false`.
 
+Conditions are used by programming languages to check, test, or *evaluate* the state of a variable's value. Soon, we'll use them to control what parts of our program will get run depending on the value of variables.
+
 We can check to see if one value matches as another, or is lesser or greater.
-<!-- SY 5/2 To belabour the point - since conditions are the fundamental "tool" in all programming, perhaps say something like 
-"We use conditions to decide if our programmes (routines? scripts?) will do one thing or another.  All programming languages use conditions, and so do humans - "If the lights are red I will stop the car"
--->
 
 # Equality Operators
 
@@ -16,24 +15,24 @@ We can check to see if one value matches as another, or is lesser or greater.
 
 *Strict* Equality or Inequality returns true if the two operands are the same type and have matching value.
 
-*Loose* Inequality works the same as strict equality, except that if the two operands are of different types, 
+*Loose* Inequality works the same as strict equality, except that if the two operands are of different types,
 it will attempt to coerce the types to match, and then checks if they match.
 
-
+Try putting these into the console:
 ```js
-console.log(1 === 1); // true
-console.log("joe" === "joe"); // true
-console.log("joe" === "Joe"); // false, case sensitive
-console.log(7 === 10); // false
-console.log(1 === "1"); // false -- types do not match
+1 === 1 // true
+"joe" === "joe" // true
+"joe" === "Joe" // false, case sensitive
+7 === 10 // false
+1 === "1" // false -- types do not match
 
-console.log(1 == 1); // true
-console.log("joe" == "joe"); // true
-console.log(7 == 10); // false
-console.log(1 == "1"); // true -- types are coerced and end up matching
+1 == 1 // true
+"joe" == "joe" // true
+7 == 10 // false
+1 == "1" // true -- types are coerced and end up matching
 ```
 
-<!-- SY 5/2  When would we use one or the other?   Why do we have two things doing the same job? I agree with the Best Practice here, but  -->
+Coercion is useful, but only when we can rely on it happening. Because loose equality coerces before it compares, we have no way to know what coercion took place. It is best to do our coercion explicitly, then use strict equality. This documents that we mean to compare two values that share a type, and not leave the comparison to chance coercion.
 
 *Best Practice*: Use only `===` and `!==`. Because of the type coercion works unreliably, loose equality should be avoided.
 
@@ -44,14 +43,14 @@ console.log(1 == "1"); // true -- types are coerced and end up matching
 * `<=` Less than or equal to
 * `>=` Greater than or equal to
 
-<!-- sy 5/2 have you shown anywhere that we can simply write 1===1 in the console, without the "console.log"  statement? -->
+
 ```js
-console.log(1 < 2); // true
-console.log(7 > 10); // false
-console.log(2 <= 2); // true
-console.log(2 <= 3); // true
-console.log(8 >= 5); // true
-console.log(10 >= 7); // false
+1 < 2 // true
+7 > 10 // false
+2 <= 2 // true
+2 <= 3 // true
+8 >= 5 // true
+10 >= 7 // false
 ```
 
 Comparison operators are especially for numbers. While you can use them for strings, they operate by essentially sorting the two strings, which doesn't usually do what you want. Sorting will be covered later.
@@ -75,37 +74,41 @@ console.log(! shopOpen); // false
 
 ## Checking against a set of values
 
-<!--  I wonder if there is way of making this point even more obvious, important, unforgettable.  It is the most common student error, I find, 
-because "name equals Felix or Ralph" is the logical way we English say things.  Also, from about this point I start wrtiting pseudo code in plain English then 
-translate it it into code.  Perhaps a sidebar about pseudocode??
+### JavaScript is not English
 
-I actually pedantically insist on it when they are getting into more complicated routines, telling them to write out their intentions in plain English before they start attempting to write code
+Most programming languages require the programmer to be explicit. JavaScript isn't English, and so does not follow the same rules as English.
 
-eg
+If we want to check the variable `name` to see if it's either `"Felix"` or `"Ralph"`, we might write the following in English
 
-if a variable exists, and it is definitely a number
-1) assign it to a variable
-2) concatenate it onto the other variable
-3) bind that to the prepared statement
-4) run it and return the results
+> is `name` equal to `"Felix"` or `"Ralph"`?
 
-otherwise
-1) prepare an error message
-2) send them back to where they came from
+***Aside***: Writing code out in English is a good way to think about what you want to write in code. This technique is referred to as *Pseudocode*: what is written is thought in terms of code, but it is not actually runnable code.
 
-It's usually athe first thing I get them to do when they are having trouble thinking anything through
--->
-
-
-Note that we have to use the logical operator to separate two discreet conditions. You can do the following, but it won't do what you want it to:
+However, a beginner programmer will then write the following, but this code won't do what they intend it to do:
 ```js
-console.log(name === "Felix" || "Ralph"); // Always true, no matter the value in name.
+// is `name` equal to `"Felix"` or `"Ralph"`?
+console.log(name === "Felix" || "Ralph"); // (Always true, no matter the value in name).
 ```
-The first condition is `name === "Felix"`, which could be `true` or `false`.
+This might seem correct at first glance, but it's not what you actually mean to happen. The condition has been written according to the syntax rules of English, not the syntax rules of JavaScript. In JavaScript, this evaluates to `true`, no matter what the value of `name` is.
 
-The other condition is just `"Ralph"`, which by itself is a non-empty string, which is coerced to `true`.
+In JavaScript, the condition on the left of the `||` operator is `name === "Felix"`, which could be `true` or `false`.
+
+The other condition is just `"Ralph"`, which by itself is a non-empty string. The `||` operator can only work with Boolean values, so  the non-empty string will be coerced to `true`.
+
+Because one side of the `||` operator is always `true`, it will always evaluate to `true`. Even when `var name = "Bob";`.
+
+### JavaScript is more verbose than English.
 
 So you must check the variable for equality with each string: `name === "Felix"` and `name === "Ralph"`. The equality operator `===` along with both of its operands must be present for each condition.
+
+```js
+// is `name` equal to `"Felix"` or `"Ralph"`?
+console.log(name === "Felix" || name === "Ralph"); // (we check name with each string)
+```
+
+To an English reader, this seems unnatural, unnecessarily long, or *verbose*. English speakers don't talk or write like this.
+
+Programming languages require us not to *imply* what we want, but rather we must be *explict* about what it is we're asking them to do for us.
 
 Because a variable cannot contain both `"Felix"` and `"Ralph"`, using `&&` will not help us. Using `||` between the two conditions will tell us if the variable contains either of the strings.
 
@@ -117,8 +120,12 @@ console.log(name !== "Felix" && name !== "Ralph"); // true
 ```
 
 As the list of names you want gets longer, other solutions are needed, such as Arrays, which will be covered later.
+
 <!-- SY 5/2 Some of your more complex examples might be useful here
+
 Write a combination of conditions which will decide ....
 What will the following return? ....
 
 -->
+
+# Exercises

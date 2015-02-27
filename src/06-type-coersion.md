@@ -5,26 +5,52 @@ Operators expect certain types of values as operands. Other languages might thro
 
 ## Type Coercion
 <!-- what is coercion?   OK I know, but I think we need a simple one-liner for the nwbies -->
-### Coercion to Numbers
 
-`true` will be coerced to `1`
-`false` will be coerced to `0`
-`""` will be coerced to 0
+Type Coercion is when JavaScript has to automatically 'coerce' a value into a different type, in order that it can do what the programmer has asked.
+
+A lot of the time, you will want coercion to occur. Sometimes however, you will not want it to happen at all.
+
+### Coercion to Numbers
+* `true` will be coerced to `1`
+* `false` will be coerced to `0`
+* `""` will be coerced to 0
+* `true + true` is coerced to `2`
+
 A string representing a valid number will be coerced to that number. If it contains non-number characters, such as `,`, `$`, `%`, or `NZD`, it will be `NaN`, mentioned below.
 
 ### Coercion to Strings
-<!-- examples reqd I think -->
+* `true + " blood"` is coerced to `"true blood"`
+* `false + " hope"` is coerced to `"false hope"`
+* `99 + " red balloons"` is coerced to `"99 red balloons"`
+
 Booleans are coerced to `"true"` or `"false"` respectively.
 Numbers are coerced to strings as they would be output normally.
 
 ### Coercion to Booleans
-<!-- examples reqd I think -->
-`0` will be coerced to a boolean `false`, every other number will be `true`
-`""` (empty string) is coerced to False
+* `! 0` is coerced to `true`
+* `!! 0` is coerced to `false`
+* `! 10` is coerced to `false`
+* `!! 10` is coerced to `true`
+* `!! "banana"` is coerced to true
+* `!! ""` is coerced to false
+
+`0` will be coerced to a boolean `false`, every other number will be `true`.
+ `""` (empty string) is coerced to `false`
 
 ### NaN – not a number
-<!-- examples reqd I think -->
-When JavaScript cannot do a sensible type coercion, we get the very useless value `NaN`, representing a numeric value that is not a number. While it would be much more useful to get an error when this happens when a statement is executed, we don't get an error, and JavaScript can carry on to the next statement.
+* `"10 NZD" * 2` gives `NaN`
+* `'$9.99' / 2` gives `NaN`
+
+When JavaScript cannot do a sensible type coercion, we get the very useless value `NaN`, representing a numeric value that is not a number.
+
+While it would be much more useful to get an error when this happens when a statement is executed, we don't get an error, and JavaScript will carry on to the next statement.
+
+```js
+var a = 10;
+var b = "10 bananas";
+var c = a * b;
+console.log(c); // NaN
+console.log(c + 1); // NaN;
 
 Any operation involving `NaN` results in `NaN`, earning the value a reputation of being *toxic*.
 

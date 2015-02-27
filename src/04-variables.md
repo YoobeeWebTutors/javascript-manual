@@ -99,8 +99,28 @@ console.log("Earl");
 console.log(27);
 console.log(true);
 ```
-<!-- we haven't mentioned the idea that variables can be changed yet. Perhaps some exercises at this point to show the sorts of things we can do with them - eg concatenation -->
+
 If the value obtained from the variable is changed, the value still in the variable is left unchanged.
+
+## Changing a variable's value
+```js
+var coffeesConsumed = 2;
+console.log(coffeesConsumed); // 2
+coffeesConsumed = 3;
+console.log(coffeesConsumed); // 3
+```
+
+We can replace a variable's value by assigning a new one into it. The old value is discarded permanently, unless of course, you copy it into another variable:
+
+```js
+var coffeesConsumed = 2;
+console.log(coffeesConsumed); // 2
+var coffeesPreviouslyConsumed = coffeesConsumed;
+coffeesConsumed = 99;
+console.log(coffeesConsumed); // 99
+console.log(coffeesPreviouslyConsumed); // 2
+```
+
 
 ## Reference Error: *variable* is not defined
 

@@ -1,5 +1,3 @@
-<!-- SY 5/2  I've always introduced arrays before loops, so that they have something practical to do woith a loop, but this is good, but hopefully the next chapter will introduce arrays while loops are still in their minds -->
-
 # Loops
 
 Computers are very good at doing repetitive tasks. How do we get computers to do something  repeatedly until some condition is met?
