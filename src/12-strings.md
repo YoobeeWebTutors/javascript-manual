@@ -78,6 +78,8 @@ While `trim()` works in all modern browsers, it is a relatively new addition. Mo
 
 `charAt` accepts an integer representing the position in the string, and will return a string of one character long containing the character at that index in the string.
 
+Each character in a string has an index: it's position in the string. The first character is at position 0. A string with a length of 5 will have its last character at index 4.
+
 ```js
 var fruit = "Plums";
 console.log(fruit.length); // 5
