@@ -11,3 +11,6 @@ default_locale: "en" # blog sidebar language set, only include: English(en) and 
 highlighter: pygments
 paginate: 5
 markdown: redcarpet
+
+sass:
+  style: compressed
