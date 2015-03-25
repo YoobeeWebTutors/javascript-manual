@@ -1,3 +1,7 @@
+---
+Title: Functions
+layout: post
+---
 # Functions
 
 <!--  SY 27/1/15

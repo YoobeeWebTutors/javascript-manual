@@ -1,3 +1,7 @@
+---
+Title: Values
+layout: post
+---
 # Computation vs Calculation
 
 Programs tell computers what to do. What do computers do best? Computation.

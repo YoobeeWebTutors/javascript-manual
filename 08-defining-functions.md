@@ -1,3 +1,8 @@
+---
+Title: Defining Functions
+layout: post
+---
+
 <!-- SY27/1/15
 
 This one is really starting to show the need for a glossary.  I'm thinking about the first-time readers here, and the unfamiliar terms that might have been mentioned once or twice but not necessarily absorbed as basic vocab yet.

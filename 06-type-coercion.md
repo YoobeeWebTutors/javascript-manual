@@ -1,3 +1,7 @@
+---
+Title: Type Coercion
+layout: post
+---
 # Type Casting and Coercion
 
 <!-- Maybe a link to a glossary for terms which might be unfamiliar eg operands -->
@@ -51,13 +55,16 @@ var b = "10 bananas";
 var c = a * b;
 console.log(c); // NaN
 console.log(c + 1); // NaN;
+```
 
 Any operation involving `NaN` results in `NaN`, earning the value a reputation of being *toxic*.
 
 ## Type Casting
 
 Type casting is when you want to intentionally convert a value to another type, and do not wish to leave it to the whims of the interpreter.
+
 <!-- examples reqd I think - why and when would we want to do this -->
+
 ### Strings to Numbers
 * `string * 1`
 
@@ -78,6 +85,7 @@ When functions are executed, they return a value, just as a variable returns its
 * `var teammates = parseInt("15", 10);`
 
 The first parameter is a string that (hopefully) has a number in it. `Number()` and `parseFloat()` only need the one parameter.
+
 <!-- what will happen if there is not a number in it -->
 
 **Aside**: `Number()` starts a capital letter because the function is also the object prototype for all number values. While this will be explained more later, functions should always start with a lower-case letter, but start with a capital letter if they are object prototypes.
@@ -85,7 +93,9 @@ The first parameter is a string that (hopefully) has a number in it. `Number()` 
 These functions are actually a bit more useful than the automatic type coersion, as they are a bit more liberal in ignoring any trailing non-number string characters, and thus may return `NaN` less than type coersion.
 
 For `parseInt`, it takes the two parameters.  The first is the same as `parseFloat()`, but the second parameter is a radix: the base the number is in. Usually you want `10` for base-10, but you can use any number between 2 and 36. Always provide the radix, otherwise older browsers' JavaScript intepreters will try to guess the base of the number, and may get it wrong.
+
 <!-- define radix -->
+
 **Best Practice**: Use `Number()`, `parseInt()` and `parseFloat()` on strings when you mean to work with a number value. Always provide a radix to `parseInt`.
 
 ### Numbers to Strings
@@ -98,6 +108,8 @@ To coerce a number into a string, just concatenate an empty string to the number
 * `!! value` – double Boolean NOT
 
 You may see `!!` in use: this is a double NOT. `!!` is often used to convert other value types to booleans, following the automatic rules above.
+
 <!-- examples reqd I think - when might we see this -->
+
 * `!! true` is true
 * `!! false` is false

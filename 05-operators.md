@@ -1,3 +1,7 @@
+---
+Title: Operators
+layout: post
+---
 # Operators
 
 What can we do with values? Make new values from old ones. These are called *operations*.
@@ -182,7 +186,7 @@ We could write this program:
 console.log(3 * 3.60);
 ```
 
-and we would get our answer logged to us: `10.6`.
+and we would get our answer logged to us: `10.8`.
 
 However, this program is not as maintainable or user friendly as it could be. Is '3' or `3.60` the price? Clearly we know what each value represents, but to an outsider, this code doesn't document itself. Putting the values in variables solves this:
 
@@ -253,6 +257,7 @@ This one string is given to `console.log()` as its parameter. The function will 
 
 # Exercises
 Write a new program for each of these points below. Each program should output what the input was along with the computed value.
+
 * Bagels cost $4.35 each (before tax). Write a program to calculate how much 9 bagels costs and output the total. Your program should output the answer $39.15.
 * Scones cost $0.60 each. Write a program to calculate and output the total price of 27 scones. You should get 16.2.
 * It costs me $3.80 to make 13 muffins. How much should I sell each of them for in order to cover costs? The answer is appx $0.29 each, but write a program to calculate this.

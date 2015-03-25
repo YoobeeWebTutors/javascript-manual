@@ -1,3 +1,7 @@
+---
+Title: Client Side Javascript
+layout: post
+---
 # Client Side Javascript
 JavaScript is the most used programming language in the world - nearly every web page uses JavaScript in some way or another.
 
@@ -79,12 +83,12 @@ The console is a place where you can type JavaScript and see what it does straig
 
 Each web browser has a developer's console built in. Some browser's consoles are more powerful than others.
 
-###### Exercise:
+## Exercise:
 
 * Locate the developer's console in three web browsers:
-* Google Chrome
-* Firefox
-* Internet Explorer or Safari
+    * Google Chrome
+    * Firefox
+    * Internet Explorer or Safari
 * Find where you can type the following code into, and run it.
-* `alert("Hello, world!");`
+    * `alert("Hello, world!");`
 * For your three web browsers, discover and memorise the keyboard shortcuts for toggling the JavaScript Console.
