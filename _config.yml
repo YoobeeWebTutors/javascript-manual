@@ -2,6 +2,7 @@
 title: JavaScript Manual
 author: Brett Taylor
 email: brett.taylor@yoobee.ac.nz
+baseurl: "/javascript-manual/"
 
 ### Site setting:
 default_column: "two" # blog style: two columns, if default_column != "two", you will see a one column blog.
@@ -9,7 +10,6 @@ default_locale: "en" # blog sidebar language set, only include: English(en) and 
 
 ### Build settings
 highlighter: pygments
-paginate: 5
 markdown: redcarpet
 
 sass:
