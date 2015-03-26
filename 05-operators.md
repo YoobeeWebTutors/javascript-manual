@@ -260,11 +260,11 @@ Write a new program for each of these points below. Each program should output w
 
 * Bagels cost $4.35 each (before tax). Write a program to calculate how much 9 bagels costs and output the total. Your program should output the answer $39.15.
 * Scones cost $0.60 each. Write a program to calculate and output the total price of 27 scones. You should get 16.2.
-* It costs me $3.80 to make 13 muffins. How much should I sell each of them for in order to cover costs? The answer is appx $0.29 each, but write a program to calculate this.
+* It costs me $3.80 to make 13 muffins. How much did each muffin cost to make? The answer is appx $0.29 each, but write a program to calculate this.
 * I have $100. How many bagels can I buy with that? The answer is 22, but write a program to do the calculation.
-  * The most sensible program uses the function JS provides to round a numbers down – go look it up. However, it is possible to program this using `+`,`-`,`*`, `/` and one of either `parseInt` or `%`.
+  * The most sensible program uses a function that JavaScript provides to round a number down – go look it up. However, it is possible to program this using `+`,`-`,`*`, `/` and one of either `parseInt` or `%`.
 * How many scones can I buy with $100? 166, but write the program.
-* How many scones can I buy with the money left over from buying as many bagels as I could with $100? 22 bagels, 7 scones, but write one program to calculate the bagels, then the scones.
+* How much change is left over from buying $100 worth of bagels? With that change, how many scones can I buy? 22 bagels, 7 scones, but write one program to calculate all of this, bagels and scones. There should be $0.10 left over, too.
 
 ## Taxes Exercise
 
