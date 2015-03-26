@@ -22,6 +22,7 @@ We can check to see if one value matches as another, or is lesser or greater.
 it will attempt to coerce the types to match, and then checks if they match.
 
 Try putting these into the console:
+
 ```js
 1 === 1 // true
 "joe" === "joe" // true
@@ -88,6 +89,7 @@ If we want to check the variable `name` to see if it's either `"Felix"` or `"Ral
 ***Aside***: Writing code out in English is a good way to think about what you want to write in code. This technique is referred to as *Pseudocode*: what is written is thought in terms of code, but it is not actually runnable code.
 
 However, a beginner programmer will then write the following, but this code won't do what they intend it to do:
+
 ```js
 // is `name` equal to `"Felix"` or `"Ralph"`?
 console.log(name === "Felix" || "Ralph"); // (Always true, no matter the value in name).
