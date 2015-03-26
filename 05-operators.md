@@ -90,6 +90,7 @@ If an operand for a Boolean operator is not a Boolean value, it will be type coe
 Because good code is easily read, always put a space on both sides of an operator.
 
 **Good**:
+
 * `1 + 1`
 * `"His name is " + " Robert Paulson."`
 * `! true`

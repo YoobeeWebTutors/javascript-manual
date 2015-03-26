@@ -35,9 +35,9 @@ This introductory course will only be exploring JavaScript in the web browser.
 
 ### Where to write JavaScript
 
-1. In an HTML file, placing script between <script> tags
-2. In a separate `.js` file, referenced by HTML files
-3. When developing, Javascript can be written directly into the "developer console"
+1. In an HTML file, placing script between &lt;script&gt; tags.
+2. In a separate `.js` file, referenced by HTML files.
+3. When developing, Javascript can be written directly into the "developer console".
 
 ### 1. HTML Files
 

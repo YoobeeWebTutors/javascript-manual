@@ -100,13 +100,11 @@ However, if we want a backslash in our string, we have to escape that also:
 
 Using this escaping technique, we can also encode other characters into a string:
 
-| Code   | Output        |
-|--------|---------------|
-| \n     | New Line      |
-| \t     | Tab Character |
-| \"     | Double Quote  |
-| \'     | Single Quote  |
-| \\     | Backslash     |
+* `\n` New Line
+* `\t` Tab Character
+* `\"` Double Quote
+* `\'` Single Quote
+* `\\` Backslash
 
 There are others too.
 
@@ -114,7 +112,7 @@ There are others too.
 
 <!-- Concatenation could be introduced here? -->
 
-###### Exercises:
+## Exercises:
 * Enter some of the above strings into your browser's JavaScript console. Be careful to get them right, but also see what happens when you get them wrong.
 * Write these in the console as valid strings. The best answers here will use the least number of characters.
   * I'd think you wouldn't do that.

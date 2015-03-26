@@ -28,7 +28,7 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, 
+h1, h2, h3, h4,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
@@ -153,17 +153,17 @@ a {
 
 
 .post-content a{
-  color: $brand-color;    
-  text-decoration: none;  
+  color: $brand-color;
+  text-decoration: none;
   border-bottom: 1px dotted;
-  &:visited {             
+  &:visited {
     color: darken($brand-color, 25%);
-  }                       
+  }
 
-  &:hover {               
+  &:hover {
     color: $hover-color;
     text-decoration: none;
-  }  
+  }
 
 }
 
@@ -197,7 +197,7 @@ blockquote{
 pre,code {
   font-size: 15px;
   border-radius: 3px;
-  background-color: $code-backgroud-color;
+  background-color: $code-background-color;
   color: $code-font-color;
 }
 
@@ -207,7 +207,7 @@ code {
 
 pre {
   padding: 8px 12px;
-  overflow: auto; 
+  overflow: auto;
 
   > code {
     border: 0;
@@ -278,9 +278,9 @@ pre {
  */
 
 
-table { 
+table {
   padding: 0;
-  border-collapse: collapse; 
+  border-collapse: collapse;
   font-size: $small-font-size;
 }
 table tr {
@@ -315,7 +315,7 @@ hr{
   border-bottom: 1px dotted #ccc;
 }
 
-cite{ 
+cite{
   font-style: italic;
   text-decoration: underline;
 }

@@ -59,6 +59,7 @@ We can also comment out lines we don't need for the moment, while we get somethi
 ```
 
 There are also block comments. These are best for longer documentation.
+
 ```js
 /* Longer comments can be written
 that span over many lines
