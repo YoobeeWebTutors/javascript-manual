@@ -1,9 +1,7 @@
 ---
-Title: Functions
-layout: post
+title: 07 – Functions
+layout: page
 ---
-# Functions
-
 <!--  SY 27/1/15
  you may well get into these points in later chapters, but these  have spring to mind while I'm reading this for the first time
 

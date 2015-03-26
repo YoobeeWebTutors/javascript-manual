@@ -9,11 +9,10 @@
 
   {% include header.html %}
 
-  {% if site.default_column == "two" %}  
+  {% if site.default_column == "two" %}
 
   <div class="page-content col-sm-12">
     {{ content }}
-    {% include post_pagination.html %}
   </div>
   {% include sidebar.html %}
 
@@ -24,7 +23,6 @@
       {{ content }}
     </div>
   </div>
-  {% include post_pagination.html %}
 
   {% endif %}
 

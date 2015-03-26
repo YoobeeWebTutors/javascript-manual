@@ -1,8 +1,7 @@
 ---
-Title: Client Side Javascript
-layout: post
+title: 01 – Client Side Javascript
+layout: page
 ---
-# Client Side Javascript
 JavaScript is the most used programming language in the world - nearly every web page uses JavaScript in some way or another.
 
 ## What does JavaScript do?

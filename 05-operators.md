@@ -1,8 +1,7 @@
 ---
-Title: Operators
-layout: post
+title: 05 – Operators
+layout: page
 ---
-# Operators
 
 What can we do with values? Make new values from old ones. These are called *operations*.
 

@@ -1,6 +1,6 @@
 ---
-Title: Defining Functions
-layout: post
+title: 08 – Defining Functions
+layout: page
 ---
 
 <!-- SY27/1/15
@@ -10,8 +10,6 @@ This one is really starting to show the need for a glossary.  I'm thinking about
 BT 27/2/15: List words you think should be in the glossary in the glossary file and if you don't write a definition, I will.
 
 -->
-
-# Defining Custom Functions
 
 We can define our own functions that we can call elsewhere in our own program:
 

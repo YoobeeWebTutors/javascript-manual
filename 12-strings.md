@@ -1,4 +1,7 @@
-# Strings
+---
+title: 12 – Strings
+layout: page
+---
 
 A string value are made out of sequence of characters.
 

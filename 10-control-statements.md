@@ -1,4 +1,8 @@
-# Control Statements
+---
+title: 10 – Control Statements
+layout: page
+---
+
 <!-- SY 5/2 This is good.  More exercises in switch case would be good, comparing them to if elses.  
 
 There's a funny article that I can't find right now about if code had been invented by the English

@@ -1,4 +1,7 @@
-# Common Errors
+---
+title: Appendix A – Common Errors
+layout: page
+---
 
 <!-- I like the idea of introducing common errors that they will see. When they are relevant, rather than in one lump, although we might have a chapter (appendix?) on debugging where everything is lumped together?? -->
 

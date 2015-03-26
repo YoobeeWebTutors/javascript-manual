@@ -1,4 +1,7 @@
-# Arrays
+---
+title: 13 – Arrays
+layout: page
+---
 
 Sometimes we need to store a list of values. Who's coming to dinner? What were the team's scores for the season?
 

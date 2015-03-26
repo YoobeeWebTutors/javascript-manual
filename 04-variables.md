@@ -1,9 +1,7 @@
 ---
-Title: Variables
-layout: post
+title: 04 – Variables
+layout: page
 ---
-
-# Variables
 
 Values like we saw in the previous chapter aren't all that useful in day to day programming by themselves. A value in one statement is more useful if we can use it in the next statement:
 

@@ -1,4 +1,7 @@
-# Conditions
+---
+title: 09 – Conditions
+layout: page
+---
 
 A condition is like a calculation but returns a Boolean `true` or `false`.
 

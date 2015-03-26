@@ -1,8 +1,7 @@
 ---
-Title: Type Coercion
-layout: post
+title: 06 – Type Coercion
+layout: page
 ---
-# Type Casting and Coercion
 
 <!-- Maybe a link to a glossary for terms which might be unfamiliar eg operands -->
 Operators expect certain types of values as operands. Other languages might throw an error of some sort if you try to, for example, do multiplication with strings. JavaScript however, will actually attempt to make your code work, and will do type coercion to get usable values.

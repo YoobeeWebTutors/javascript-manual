@@ -1,4 +1,7 @@
-# Loops
+---
+title: 11 – Loops
+layout: page
+---
 
 Computers are very good at doing repetitive tasks. How do we get computers to do something  repeatedly until some condition is met?
 

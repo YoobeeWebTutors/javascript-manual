@@ -1,8 +1,7 @@
 ---
-Title: Statements
-layout: post
+title: 02 – Statements
+layout: page
 ---
-# Statements
 
 JavaScript programs are written line by line. Each line, or *statement* is a command to the computer to do one thing.
 
