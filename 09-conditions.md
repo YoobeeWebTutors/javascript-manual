@@ -54,7 +54,7 @@ Coercion is useful, but only when we can rely on it happening. Because loose equ
 2 <= 2 // true
 2 <= 3 // true
 8 >= 5 // true
-10 >= 7 // false
+10 <= 7 // false
 ```
 
 Comparison operators are especially for numbers. While you can use them for strings, they operate by essentially sorting the two strings, which doesn't usually do what you want. Sorting will be covered later.
