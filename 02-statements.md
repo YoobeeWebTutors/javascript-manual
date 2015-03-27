@@ -42,7 +42,17 @@ The program cannot go to the next line of code until the current line finishes e
 **Best Practice**: To JavaScript, a statement can be as many characters long as it needs to be, but to programmers longer lines are harder to read. Try not to make a line longer than 80 characters, and certainly not longer than 120.
 
 ## Comments
+<!--  SY March 26  
+Comments
 
+You should always ensure your code could be easily understood by other developers, and the main methods we have for this are comments and the way we name our variables and functions etc (you will see what these are very soon)_
+
+Comments are lines of code that don't do anything, and we use them to leave helpful hints to other coders when they read this code in the future. Usually this is yourself, and yes, you'll always be a different coder in the future.
+
+Best Practice: 
+    Code should be self-documenting where possible. Soon you will be giving names to variables and functions, so you will make those names easily understood by anyone who reads your code.
+    Comment briefly and clearly whenever necessary to ensure that your intentions for each piece of code are clearly understood.(see <a href="http://codeguide.co/#css-comments">http://codeguide.co/#css-comments</a> 
+-->
 Comments are lines of code that don't do anything. We use them to leave comments to other coders when they read this code in the future. Usually this is yourself, and yes, you'll always be a different coder in the future.
 
 ```js
