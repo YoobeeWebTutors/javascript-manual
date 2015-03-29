@@ -100,6 +100,12 @@ The code above uses `i` as a variable. This convention is as old as the hills, w
 
 Hopefully you can see why starting at 0 is important: after it's been through once, `i` will be `1` and after ten times it will be `10`.
 
+## What loop when?
+
+* If you know exactly how many times a loop should run, use a `for` loop.
+* If you must run the contents of the loop at least once, use a `do`…`while` loop.
+* All other times use a `while` loop.
+
 ## Exercises
 * Make a loop that outputs a * for every character in a string (do some research on getting the length of a string value)
 * Make a loop that outputs every number from 1 to 100
