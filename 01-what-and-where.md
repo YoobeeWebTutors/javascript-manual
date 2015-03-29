@@ -18,16 +18,16 @@ This book focuses on JavaScript in the web browser, and will not be touching on 
 
 ### The Web Browser
 
-Here, JavaScript is used to add behaviour to a page. This can be as simple as doing something when the page loads, or causing something to happen when different page elements are clicked, dragged, or written into.
+Browsers are simply programs designed to interpret client side code in order to create web pages to display. The code, along with the content, is separated by the browser into four layers:
 
-Web pages can be broken into four layers
+Web pages can be broken into four layers:
 
 1. Content (text, pictures, video, audio) – **Plain Text**
-2. Document Semantics (headings, paragraphs, links, etc.) – **HTML**
+2. Document Semantics or 'markup' (headings, paragraphs, links, etc.) – **HTML**
 3. Presentation Rules (font, colour, position, etc.) – **CSS**
 4. Behaviours (interactivity, data handling, etc.) – **JavaScript**
 
-JavaScript can also be tinkered with in the browser's developer console.
+JavaScript adds behaviour to web pages. This can be as simple as doing something when the page loads, or causing something to happen when different page elements are clicked, dragged, or written into, for example error messages that appear when a form field is filled in incorrectly.
 
 ## JavaScript for the Web Browser
 
