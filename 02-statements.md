@@ -43,14 +43,18 @@ The program cannot go to the next line of code until the current line finishes e
 
 ## Comments
 
-Comments are lines of code that don't do anything. We use them to leave comments to other coders when they read this code in the future. Usually this is yourself, and yes, you'll always be a different coder in the future.
+Comments are lines of code that don't do anything, and we use them to leave helpful hints to other coders when they read this code in the future. Usually this is yourself, and yes, you'll always be a different coder in the future.
+
+You should always ensure your code could be easily understood by other developers, and the main methods we have for this are comments and the way we name our variables and functions etc (you will see what these are very soon)_
 
 ```js
 // one line comment
 alert(10); // pieces of fruit available
 ```
 
-*Best Practice*: Comments are very useful for documenting, but code should be self-documenting where possible. As we go along, we'll learn better ways to document our code than with comments.
+*Best Practice*: 
+* Where possible, your code should be readable without comments. This is called self-documenting code. Soon you will be giving names to variables and functions, so name things so they are easily understood by anyone who reads your code.
+* Comment briefly and clearly whenever necessary to ensure that your intentions for each piece of code are clearly understood.(see <a href="http://codeguide.co/#css-comments">http://codeguide.co/#css-comments</a>
 
 We can also comment out lines we don't need for the moment, while we get something to work. It's best to actually remove commented out code before you share it on a version control system, such as Git.
 
