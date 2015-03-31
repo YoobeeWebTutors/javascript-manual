@@ -230,7 +230,7 @@ pirate = pirate.toLowerCase();
 var i = 0;
 while (pirate.indexOf("r", i) > -1) {
 	console.log(pirate.indexOf("r", i));
-	i = boat.indexOf("r", i) + 1;
+	i = pirate.indexOf("r", i) + 1;
 }
 ```
 
