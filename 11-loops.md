@@ -43,7 +43,7 @@ This code will ask for a string, and output that string five times.
 
 Before it runs the loop block, it will check to see if `outputCount` is greater than zero, and if that condition is true. If true, it will run the loop block: output the string, and decrement `outputCount` by one. After each loop iteration, it checks the `while` condition again, and as long as the condition is true, it will continue to run the loop block.
 
-###### Exercise — Infinite Loops
+## Exercise — Infinite Loops
 
 It's very easy to write an *infinite loop* - a loop that doesn't end. Browsers these days will detect that a section of code hasn't ended for a few seconds and will prompt the user  that the page has stopped responding, giving you your exit from the infinite loop.
 

@@ -193,7 +193,7 @@ Because we don't usually want all the code after that `case` statement to be run
 
 `default` is a case that catches anything that doesn't match any of the `case` values.
 
-# Exercises
+## Exercises
 
 * Coffees are $3.50 each, but if you order more than 10, you get a 15% discount. Write a program that asks for the quantity and correctly calculates the total after discount.
 * Muffins are $2.35 each, but buy 10 or more they're $2.10 each, but buy 25 or more and they're $1.90 each. Accept quantity as an input, output the unit price and the total.

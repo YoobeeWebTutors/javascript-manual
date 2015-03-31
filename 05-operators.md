@@ -272,6 +272,7 @@ Write a new program for each of these points below. Each program should output w
 * Getting the GST amount for an inclusive number is slightly harder: Multiply the inclusive price by 3 and divide by 23. Write a program that accepts a number including GST and output the amount of tax added on, as well as the number excluding tax.
 
 # Research
+
 * Weirdly, in JavaScript, `0.1 + 0.2` does not give you `0.3`.
   * What does JavaScript calculate it to be?
   * Why is the computer doing this?

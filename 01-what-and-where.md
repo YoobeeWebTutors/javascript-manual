@@ -82,7 +82,7 @@ The console is a place where you can type JavaScript and see what it does straig
 
 Each web browser has a developer's console built in. Some browser's consoles are more powerful than others.
 
-## Exercise:
+## Exercises
 
 * Locate the developer's console in three web browsers:
     * Google Chrome

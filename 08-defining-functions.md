@@ -312,7 +312,7 @@ Obscuring is not normally a problem: reusing variable names is normally fine, bu
 ***Best Practice***: Always use `var` when creating variables inside functions to prevent creating global variables.
 
 
-# Exercises
+## Exercises
 * Write a function that returns the input string with French « guillemets » around it. These are not two angle brackets together, but one character.
 * Write a function that returns the input string surrounded with Spanish exclamation marks around it: ¡Arriba!
   * ¿Se puede hacer otra con signos de interrogación españoles?
