@@ -54,7 +54,7 @@ These two methods work on the existing string and return it changed to lowercase
 ```js
 var message = 'Bob said to James, \"What\'s happening?\"';
 console.log(message.toLowerCase()); // 'bob said to james, "what's happening?"'
-console.log(message.toLowerCase()); // 'BOB SAID TO JAMES, "WHAT'S HAPPENING?"'
+console.log(message.toUpperCase()); // 'BOB SAID TO JAMES, "WHAT'S HAPPENING?"'
 console.log(message); // 'Bob said to James, "What's happening?"'
 ```
 
@@ -111,7 +111,9 @@ for (var i = 0; i < fruit.length; i += 1) {
   console.log(fruit.charAt(i) + ": " + fruit.charCodeAt(i));
 }
 ```
+
 Output:
+
 ```
 B: 66
 a: 97
@@ -138,14 +140,17 @@ name.substr(5, 10); // "ley"
 
 Note that we can provide a negative startIndex. This will count back from the end of the string.
 
-We can something pretty neat with a loop:
+We can use in a loop to do something pretty neat:
+
 ```js
 var name = "Aperture";
 for (var i = 0; i < name.length; i += 1) {
   console.log(name.substr(i, 3));
 }
 ```
+
 Output:
+
 ```
 Ape
 per
@@ -158,7 +163,7 @@ e
 ```
 Here we loop over the string to get each character in turn, along with the next two characters.
 
-#### Exercise
+# Exercise
 In the program above, how can we change the program to not show the last two lines, where three letters are not being output?
 
 ## `substring( indexA [, indexB ] )`
@@ -199,7 +204,7 @@ name.slice(-5, -1); // "tman"
 * `String.indexOf()`
 * `String.lastIndexOf()`
 
-# `indexOf( needle, fromIndex )` and `lastIndexOf( needle, fromIndex )`
+# `indexOf( needle [, fromIndex ] )` and `lastIndexOf( needle [, fromIndex ] )`
 
 These two methods search the string (the 'haystack') for the 'needle', starting optionally at the fromIndex, and working forward or backwards. When the needle is found, it returns the index at which needle begins. If the needle isn't found, the method returns `-1`
 
@@ -217,10 +222,22 @@ console.log(boat.lastIndexOf("r")); // 11
 console.log(boat.lastIndexOf("r", 11 - 1)); // 6
 ```
 
+To find all occurances of the letter 'r' in a string, we can do this:
+
+```js
+var pirate = "Arr! Shiver me timbers and Raise the anchor!";
+pirate = pirate.toLowerCase();
+var i = 0;
+while (pirate.indexOf("r", i) > -1) {
+	console.log(pirate.indexOf("r", i));
+	i = boat.indexOf("r", i) + 1;
+}
+```
+
 # Exercises
 * Write a function that only returns true if its first parameter is a string longer than ten characters.
 * Write a function that checks if the string contains the characters 'pip'. Extra for experts: Write it without `indexOf` or `lastIndexOf`
 * Write a function that returns a count of the number of vowels in a string.
 * Write a function that 'disemvowels' a string. Return the input string missing the characters 'AEIOUaeiou'. "Banana" -> "Bnn"
 * Write a function that reverses a string. "Banana" becomes "ananaB"
-* Write a function that detects palindromes. It should return true for "Tacocat", "A Toyota's a Toyota", "Go hang a salami, I'm a lasagna hog!"
+* Write a function that detects palindromes. It should return true for "bob", "Tacocat", "A Toyota's a Toyota", "Go hang a salami, I'm a lasagna hog!", and false for "Banana" and "Nyan Cat". You will have to create a string that contains only the letters, reverse that string and check if it is the same.
