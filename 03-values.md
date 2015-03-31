@@ -49,7 +49,6 @@ Go outside these ranges and you'll get magical values such as Infinity and -Infi
 
 **Aside**: These may seem like strange numbers to have as limits, but on a computer, everything comes back to Binary and powers of two. JavaScript uses 64 bits to store numbers. 52 of these bits for the 16 significant figures, 1 bit for the sign (if it's positive or negative), and 11 bits for the exponent.
 
-**Exercises**
 
 ## String Values
 
@@ -112,7 +111,7 @@ There are others too.
 
 <!-- Concatenation could be introduced here? -->
 
-## Exercises:
+## Exercises
 * Enter some of the above strings into your browser's JavaScript console. Be careful to get them right, but also see what happens when you get them wrong.
 * Write these in the console as valid strings. The best answers here will use the least number of characters.
   * I'd think you wouldn't do that.

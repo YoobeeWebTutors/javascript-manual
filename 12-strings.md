@@ -163,7 +163,7 @@ e
 ```
 Here we loop over the string to get each character in turn, along with the next two characters.
 
-# Exercise
+## Exercise
 In the program above, how can we change the program to not show the last two lines, where three letters are not being output?
 
 ## `substring( indexA [, indexB ] )`
@@ -234,7 +234,7 @@ while (pirate.indexOf("r", i) > -1) {
 }
 ```
 
-# Exercises
+## Exercises
 * Write a function that only returns true if its first parameter is a string longer than ten characters.
 * Write a function that checks if the string contains the characters 'pip'. Extra for experts: Write it without `indexOf` or `lastIndexOf`
 * Write a function that returns a count of the number of vowels in a string.

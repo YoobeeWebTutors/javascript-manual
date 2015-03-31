@@ -267,6 +267,6 @@ JavaScript should use an appropriately efficient sorting algorithm (which is the
 * [Sorting Algorithms](http://www.sorting-algorithms.com/) - animations on how different computer sort methods work.
 * [Fisher–Yates Shuffle](http://bost.ocks.org/mike/shuffle/) - an explanation on how to de-sort or *shuffle* an array efficiently in JavaScript.
 
-# Exercises
+## Exercises
 * Write a function that will convert an array of names to a proper english sentence: "Alice, Bob, and Charles". Every name is separated with a comma, except the last one which also includes 'and'
 *
