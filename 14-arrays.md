@@ -5,13 +5,18 @@ layout: page
 
 Sometimes we need to store a list of values. Who's coming to dinner? What were the team's scores for the season?
 
+Arrays are ordered lists of data. Each item in the list is called an *element*, which we can access by the element's index.
+
 ```js
 var guests = ["Alice", "Charles", "Dave", "Bob"];
 var scores = [10, 15, 12, 17, 3, 11, 23];
 var bananas = [true, 0, "Today"]; // Yes! We Have No Bananas
 ```
 
-Here we use square brackets to denote an Array literal. There are other ways to create arrays, but this is the most useful.
+Once we have an array, we can loop over its elements the same way we loop over a string's characters. We can add and remove elements, change each element, and even sort the array any way we like.
+
+Above we use square brackets to denote an Array literal. There are other ways to create arrays, but this is the most useful.
+
 
 ## Array Elements
 
@@ -60,6 +65,7 @@ Usually, when an array is output, it will be coerced into a string:
 alert(guests); // "Alice,Charles,Dave,Bob"
 alert(scores); // "9,15,12,17,3,11,23"
 ```
+
 However, when using `console.log` or the like, the console panel will often show you the array in literal form.
 
 We get more control over converting an array to a string using the `join` method:
@@ -193,6 +199,7 @@ ages.sort(compare); // [2, 9, 10, 11, 15, 20] <-- numerically ascending!
 ```
 
 Output:
+
 ```
 Cherry vs apple
 apple vs banana
@@ -214,11 +221,12 @@ apple vs banana
 9 vs 2
 ```
 
-Please note that we're *not calling* `compare` when we pass it to `sort`. `sort` will call `compare` each time it needs to compare two elements.
+Please note that we *do not call* `compare` when we pass it to `sort`. `sort` will call `compare` each time it needs to compare two elements.
 
 ```js
 // WRONG:
 fruit.sort(compare());
+
 // CORRECT:
 fruit.sort(compare);
 ```
@@ -241,6 +249,7 @@ var ages = [15, 20, 2, 11, 9, 10];
 ages.sort(compareNumbersAscending); // [2, 9, 10, 11, 15, 20]
 ages.sort(compareNumbersDescending); // [20, 15, 11, 10, 9, 2]
 ```
+
 The `compareNumbersAscending` still returns a positive or negative number, or zero. `compareNumbersDescending` does the same thing, only larger numbers come first.
 
 ### Sorting Arrays of Strings Alphabetically
@@ -254,7 +263,6 @@ function compareStringsAscending(a, b) {
 
 var fruit = ["apple", "banana", "Cherry", "dates"];
 fruit.sort(compareStringsAscending);
-
 ```
 
 ### Notes about Sorting
@@ -268,5 +276,24 @@ JavaScript should use an appropriately efficient sorting algorithm (which is the
 * [Fisher–Yates Shuffle](http://bost.ocks.org/mike/shuffle/) - an explanation on how to de-sort or *shuffle* an array efficiently in JavaScript.
 
 ## Exercises
-* Write a function that will convert an array of names to a proper english sentence: "Alice, Bob, and Charles". Every name is separated with a comma, except the last one which also includes 'and'
-*
+
+### Reading Arrays
+* Write a function that takes an array of elements and returns true if all the elements are strings.
+* Write one function for each of the following that takes an array of unsorted numbers and returns a number:
+  * the average or mean (sum of elements ÷ count of elements)
+  * the minimum number (smallest element)
+  * the maximum number (largest element)
+  * the median (the middle element when sorted)
+  * the mode (the element that appears most frequently, `false` if nothing is repeated)
+* Write a function that takes an array of people's names `['Alice', 'Bob', 'Charles']` and output a proper english sentence: `"Alice, Bob, and Charles"`. See how every name is separated with a comma, except the last one which is preceded by 'and'.
+* Using an array of ranks and an array of suits, write a set of nested loops that outputs every playing card: Ranks: Ace, 2—10, Jack, Queen, King. Suits: Clubs, Diamonds, Hearts, Spades.
+ * Extra for experts: do it with one `for` loop and `%`.
+### Creating Arrays
+
+* Write a function that takes an array of string elements and returns a new array of only the elements that contain strings longer than 5 characters.
+* Write a function that takes an array of numbers and returns a new array of each element squared (i.e. 3 squared = 3² = 3 ✕ 3 = 9), (e.g. `[3, 10, 42]` => `[9, 100, 1764]`)
+
+### Sorting Arrays
+* Write a function that sorts an array of numbers numerically, with largest numbers coming last (ascending).
+* Write a function that takes an array of string elements and sorts the array by length of string with longest strings coming first (descending).
+* Write a function that takes an array of string elements and sorts the array by each element's vowel count, with highest vowel count coming last (ascending).
