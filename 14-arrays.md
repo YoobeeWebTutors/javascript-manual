@@ -61,6 +61,7 @@ scores.length; // 7
 ## Creating a string from an array
 
 Usually, when an array is output, it will be coerced into a string:
+
 ```js
 alert(guests); // "Alice,Charles,Dave,Bob"
 alert(scores); // "9,15,12,17,3,11,23"
@@ -271,7 +272,7 @@ Sorting is one of the more processor-intensive things you can ask a computer to 
 
 JavaScript should use an appropriately efficient sorting algorithm (which is these days is Quick Sort), and we just need to provide the compare function.
 
-* [https://www.youtube.com/watch?v=kgBjXUE_Nwc](Computerphile: Getting Sorted) - How computer sorts work on paper.
+* [Computerphile: Getting Sorted](https://www.youtube.com/watch?v=kgBjXUE_Nwc) - How computer sorts work on paper.
 * [Sorting Algorithms](http://www.sorting-algorithms.com/) - animations on how different computer sort methods work.
 * [Fisher–Yates Shuffle](http://bost.ocks.org/mike/shuffle/) - an explanation on how to de-sort or *shuffle* an array efficiently in JavaScript.
 
@@ -284,10 +285,29 @@ JavaScript should use an appropriately efficient sorting algorithm (which is the
   * the minimum number (smallest element)
   * the maximum number (largest element)
   * the median (the middle element when sorted)
-  * the mode (the element that appears most frequently, `false` if nothing is repeated)
+  * Extra for experts: the mode (the element that appears most frequently, `false` if nothing is repeated)
 * Write a function that takes an array of people's names `['Alice', 'Bob', 'Charles']` and output a proper english sentence: `"Alice, Bob, and Charles"`. See how every name is separated with a comma, except the last one which is preceded by 'and'.
 * Using an array of ranks and an array of suits, write a set of nested loops that outputs every playing card: Ranks: Ace, 2—10, Jack, Queen, King. Suits: Clubs, Diamonds, Hearts, Spades.
- * Extra for experts: do it with one `for` loop and `%`.
+  * Extra for experts: do it using `%` and a single `for` loop.
+* Using an array of months and an array of days in each month, write a program that outputs each day of the year:
+
+```
+1 January
+2 January
+3 January
+…
+30 January
+31 January
+1 February
+2 February
+…
+29 November
+30 November
+1 December
+…
+31 December
+```
+
 ### Creating Arrays
 
 * Write a function that takes an array of string elements and returns a new array of only the elements that contain strings longer than 5 characters.
