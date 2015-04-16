@@ -22,15 +22,16 @@ Simple regular expressions are easy to understand, but complex Regular Expressio
 
 This regular expression matches strings that are valid URLs:
 
-`^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$`
+```
+/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,})([\/\w \.-]*)*\/?$/
+```
 
 To be able to understand how regular expressions are interpreted by the computer, I like using a regex visualiser to show a regular expression as a *railroad diagram*.
 
 ![The above regular expression visualised as a railroad diagram](images/regulex-url.png)
 
-* [RegexOne: Learn to use Regular Expressions](http://regexone.com)
 * [Regulex: Visualise regular expressions as railroad diagrams](http://jex.im/regulex/)
-* [Visibone: Regular Expressions quick reference](http://www.visibone.com/regular-expressions/)
+
 
 ## Declaring Regular Expressions
 
@@ -108,12 +109,24 @@ Here are several regular expressions you'll find useful.
 * `/^.{6,}$/` -- Match a password
 * `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` -- Match a hexadecimal CSS colour code
 * `/^[a-z0-9-]+$/` -- Match a slug: a pretty fragment of a URL
-* `/([^\s]+(\.(?i)(jpg|png|gif|bmp))$)/` -- Match a filename based on extension
-* `/^([a-z0-9_\.-\+]+)@([\da-z\.-]+)\.([a-z\.]{2,})$/` -- Match an email address
+* `/([^\s]+(\.(jpg|png|gif|bmp))$)/` -- Match a filename based on extension
+* `/^([a-z0-9_.\-+]+)@([\da-z.-]+)(\.([a-z]{2,}))+$/` -- Match an email address
 * `/(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)/` -- Match a 12-hour time
 * `/([01]?[0-9]|2[0-3]):[0-5][0-9]/` -- Match a 24-hour time.
-* `/(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/((19|20)\\d\\d)/` -- Match a date in dd/mm/yyyy format
-* `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/` -- Match a URL, excluding query strings and anchors
+* `/(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/((19|20)\d\d)/` -- Match a date in dd/mm/yyyy format
+* `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,})([\/\w \.-]*)*\/?$/` -- Match a URL, excluding query strings and anchors
 * `/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/` Match an IPv4 Address
 
 And finally, [DO NOT attempt to parse HTML with Regular Expressions.](http://stackoverflow.com/questions/701166/can-you-provide-some-examples-of-why-it-is-hard-to-parse-xml-and-html-with-a-reg)  ***[EVER.](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454)***
+
+# Exercises
+
+* Run through [RegexOne](http://regexone.com), completing the tutorial and the practical examples.
+* Write a function that returns true if the input parameter is a valid email address (use the above regex)
+
+# Resources
+
+* [Regulex: Visualise regular expressions as railroad diagrams](http://jex.im/regulex/)
+* [RegexOne: Learn to use Regular Expressions](http://regexone.com)
+* [Visibone: Regular Expressions quick reference](http://www.visibone.com/regular-expressions/)
+* [MDN: Regular Expressions in JavaScript Reference ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
