@@ -7,7 +7,7 @@ Programming is about taking some input, doing a calculation or computation with 
 
 ## The Document
 
-Every element in the current page is accessible via the `document` object. This object lets us access different parts of the page.
+Every element in the current page is accessible via the `document` object. This object lets us access different parts of the page. We call this the DOM, or `Document Object Model`.
 
 When JavaScript was first released, CSS wasn't a thing yet. Over time, the DOM has evolved through levels, from Level 0 where we could change very little, to Level 3, which is faster, less cumbersome, and lets us control nearly everything.
 
@@ -144,7 +144,13 @@ You can get quite expressive with CSS Selectors and these two methods.
 
 ### `element.classList[]`
 
-HTML 5 also formalised the `classList` collection. Each item in this array-like object represents each individual class applied to that element. The object also has methods:
+HTML 5 also formalised the `classList` collection. Instead of working with the `className` property (which is a string matching the class attribute of an element), we can easily manage adding and removing classes with ease. Each item in this array-like object represents each individual class applied to that element. The object also has methods:
 
 * `element.classList.contains( string )` -- returns true if this element has that class on it
-* `element.classList.toggle( string )` -- adds the class if not already present, removes the class if already present.
+* `element.classList.add( string )` -- adds the class if not already present
+* `element.classList.remove( string )` -- removes the class if already present
+* `element.classList.toggle( string )` -- adds the class if not already present or removes the class if already present.
+
+`classList` is well supported, but only got introduced into Internet Explorer in version 10, and still has some minor issues in IE11. There is a polyfill to add `classList` to older browsers.
+
+* [eligrey's `classList` polyfill](https://github.com/eligrey/classList.js)
