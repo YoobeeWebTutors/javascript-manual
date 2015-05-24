@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Form Validation</h1>
+    <form id="contact-form" method="POST" action="success.html">
+      
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input id="firstname" type="text" name="firstname" required minlength="2">
+        <span id="firstname-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input id="lastname" type="text" name="lastname" required minlength="2">
+        <span id="lastname-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" name="email" required>
+        <span id="email-error"></span>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+
+    </form>
+  </div>
+  <script src="form-validation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      addFormValidation(document.querySelector('#contact-form'));
+    });
+  </script>
+</body>
+</html>
