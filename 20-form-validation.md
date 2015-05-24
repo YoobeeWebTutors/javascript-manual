@@ -595,7 +595,8 @@ Let's say that our name fields are still required, but now must be two or more c
         <button type="submit">Submit</button>
       </div>
 
-    </form>```
+    </form>
+```
 
 The shortest names (in English) are two characters minimum. This also prevents people just filling the name field with one character.
 
