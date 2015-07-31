@@ -14,6 +14,7 @@ From easiest to hardest.
 * Write a function that takes a number and returns true when it is positive.
 * Write a function that takes a number in Celsius and returns the same number in Fahrenheit.
   * Write a seperate function to do the reverse.
+* Write a function that prompts the user to to enter either 1, which will convert Celsius to Fahrenheit, or 2 which will do the opposite, and accordingly return the result.
 * Write a function that takes a string and returns the tally of spaces
 * Write a function that takes a string and returns the tally of non-alphanumeric characters.
 * Write a function that takes a string and returns only the digits found in the string.

@@ -129,6 +129,7 @@ alert("You know the password? Awesome! Have a squishy, yellow day!");
 * Make a loop that outputs every even number, starting at 100, going to 0 (aka descending order)
 * *Fizz-Buzz*: Output every number between 1 and 100, except when the number divides evenly by 3 or 5: instead of the number, output "fizz" or "buzz" respectively, and output "fizzbuzz" when it evenly divisible by both.
 * *99 Bottles…*: Write a program to output the lyrics to the song "99 bottles of beer" as found on http://www.99-bottles-of-beer.net/lyrics.html -- there are answers on that site, but none of them are actually simple, nor get the lyrics exactly right.
+* Make a Christmas tree out of asterisks.
 
 ## Research
 * What does the `continue` keyword do when used in a loop?
