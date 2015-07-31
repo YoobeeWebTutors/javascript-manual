@@ -73,6 +73,12 @@ do {
 
 `while` by itself checks the condition before running the block, and so if the condition is false the first time through it may never run the loop block at all.
 
+### Do while loop exercise
+Using a do-while loop, create a game that will flip a coin X amounts of times in a succession. For example, in order for the game to finish, your code will need to flip "heads" 10 times in a row. Each time the coin flips the wrong side, the game starts again.
+
+Keep a tally of how many flips were made during the entire game. Also keep in mind that the more successions you require (10 in a row, 30 in a row etc), the longer it may take for the game to finish.
+
+Note: Browsers typically ask if you want to kill JavaScript after 15 seconds of continuous processing.
 
 ## `for`
 
