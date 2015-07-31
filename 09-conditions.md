@@ -134,3 +134,12 @@ What will the following return? ....
 -->
 
 # Exercises
+
+
+### 1. Activity Advisor
+
+Ask a user for their year of birth. Work out their age in years.
+
+- If their age is less than 18, tell the user to go to the beach.
+- If their age is between (and including) 18 and 65 then tell the user to go to work.
+- If their age is 65 or greater, then tell them to go play bingo.
