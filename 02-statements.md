@@ -52,9 +52,10 @@ You should always ensure your code could be easily understood by other developer
 alert(10); // pieces of fruit available
 ```
 
-*Best Practice*: 
+*Best Practice*:
+
 * Where possible, your code should be readable without comments. This is called self-documenting code. Soon you will be giving names to variables and functions, so name things so they are easily understood by anyone who reads your code.
-* Comment briefly and clearly whenever necessary to ensure that your intentions for each piece of code are clearly understood.(see <a href="http://codeguide.co/#css-comments">http://codeguide.co/#css-comments</a>
+* Comment briefly and clearly whenever necessary to ensure that your intentions for each piece of code are clearly understood. Refer to [Codeguide.co: CSS Comments](http://codeguide.co/#css-comments)
 
 We can also comment out lines we don't need for the moment, while we get something to work. It's best to actually remove commented out code before you share it on a version control system, such as Git.
 
