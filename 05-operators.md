@@ -70,10 +70,10 @@ With `&&` the logical AND operator, both operands must be true to get a true res
 
 With `||` the logical OR operator, one or more of the operands must be true to get a true result.
 
-* `false && false` is false
-* `true && false` is true
-* `false && true` is true
-* `true && true` is true
+* `false || false` is false
+* `true || false` is true
+* `false || true` is true
+* `true || true` is true
 
 With `!` the logical NOT operator, it only takes one operand, and the value of that operand is 'flipped':
 
