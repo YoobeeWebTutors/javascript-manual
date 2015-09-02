@@ -103,15 +103,15 @@ Some operators take precedence over others, and must be calculated or 'evaluated
 
 * `9 + 9 * 9`
 
-Is this 9 plus 9 equals 18, 18 times 9 equals 162?
+Is this 9 plus 9 equals 18, 18 times 9 equals 162? (the -> here are just to show us the result)
 
-* `9 + 9` -> `18`
-* `18 * 9` -> `162`
+* `9 + 9` -> 18
+* `18 * 9` -> 162
 
 Or is it 9 times 9 equals 81, 9 plus 81 equals 90?
 
-* `9 * 9` -> `81`
-* `9 + 81 ` -> `90`
+* `9 * 9` -> 81
+* `9 + 81` -> 90
 
 In Programming, this is clearly defined. Each programming language has its own *order of operations*.
 
