@@ -71,14 +71,14 @@ that span over many lines
 by using block comments */
 
 /**
-* This style of comment is called a DocBlock, and is often found
-* in larger projects to serve as documentation for the thing that follows it.
-* JavaScript just sees a fancy block comment, but other tools will see the
-* asterisks and read the text and metadata in it and generate helpful books or
-* popups for you.
-*
-* @returns Boolean
-*/
+ * This style of comment is called a DocBlock, and is often found
+ * in larger projects to serve as documentation for the thing that follows it.
+ * JavaScript just sees a fancy block comment, but other tools will see the
+ * asterisks and read the text and metadata in it and generate helpful books or
+ * popups for you.
+ *
+ * @returns Boolean
+ */
 function doAThing() {
   return true;
 }
