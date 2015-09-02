@@ -17,6 +17,10 @@ The keyword `var` tells JavaScript to create a *variable*. A variable is a place
 
 A variable can hold one value and one value only. If we put a new value in, any previous value is discarded.
 
+Think of a variable as a container for one value, and each container is labeled with a unique name.
+
+Variables do nothing but provide a place for a value to live between statements. Everything in JavaScript works with the value stored by the variable, not the variable itself. You could say that JS code is interested in the peanut butter stored in the jar, but not really concerned about the jar.
+
 Think of computer memory as a giant wall of mailboxes or pigeon holes. Each box or hole has a label on it -- the variable's name. In the above example, the variable is called `username`.
 
 The variable will exist for as long as the code it is defined in is being executed. You'll learn more about this when we come to functions and variable scope.
