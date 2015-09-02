@@ -311,6 +311,32 @@ Obscuring is not normally a problem: reusing variable names is normally fine, bu
 
 ***Best Practice***: Always use `var` when creating variables inside functions to prevent creating global variables.
 
+# Hoisting
+
+When a variable is defined in a function, even if the variable is defined in the middle of a code block, the variable is actually being defined before any of the code in that function runs. The variable definition gets *hoisted* to the top of the function.
+
+```js
+function hoistAway() {
+  alert(hoist);
+  var hoist = 10;
+  alert(hoist);
+}
+```
+
+is functionally equivalent to:
+
+```js
+function hoistAwayEquivelent() {
+  var hoist;
+  alert(hoist);
+  hoist = 10;
+  alert(hoist);
+}
+```
+
+Both of these functions, when called, will alert `"undefined"` and then `"10"`.
+
+If you remember to define a variable before you use it, hoisting becomes a non-issue.
 
 ## Exercises
 * Write a function that returns the input string with French « guillemets » around it. These are not two angle brackets together, but one character.
