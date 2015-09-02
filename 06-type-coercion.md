@@ -37,8 +37,9 @@ Numbers are coerced to strings as they would be output normally.
 * `!! "banana"` is coerced to true
 * `!! ""` is coerced to false
 
-`0` will be coerced to a boolean `false`, every other number will be `true`.
- `""` (empty string) is coerced to `false`
+`0` will be coerced to a boolean `false`, every other number will be `true`. `""` (empty string) is coerced to `false`
+
+Values that coerce to `true` are called *truthy*, and values that coerce to `false` are called *falsy*. They're not literally `true` or `false` but they're not far from it.
 
 ### NaN – not a number
 * `"10 NZD" * 2` gives `NaN`
@@ -112,3 +113,5 @@ You may see `!!` in use: this is a double NOT. `!!` is often used to convert oth
 
 * `!! true` is true
 * `!! false` is false
+
+You might use `!!` when coercing a truthy or lossy value into a literal Boolean `true` or `false`.
