@@ -29,13 +29,15 @@ It is best to define your variables at the top of their scope, to avoid an issue
 
 ## Variable Names
 
-Names for things in JavaScript, such as variables, should be formed from the 26 upper and lower case letters (A .. Z, a .. z), the 10 digits (0 .. 9), and _ (underbar).
+Names for things in JavaScript, such as variables, should be formed from the 26 upper and lower case letters (A .. Z, a .. z), the 10 digits (0 .. 9), and _ (underscore).
 
 Variables and functions should start with a lower case letter.
 
 Variables in JavaScript cannot start with a digit.
 
-There are tons of reserved keywords in JavaScript that you can't use as a name. `var` is one of them. Check [Mozilla Developer Network's Lexical Grammar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) page for the complete list of words you can't use. Notable reserved words inclued `class`, and `super`, but you can use `className` and `superMan`.
+Variables and functions cannot have spaces in their names.
+
+There are tons of reserved keywords in JavaScript that you can't use as a name. `var` is one of them. Check [Mozilla Developer Network's Lexical Grammar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) page for the complete list of words you can't use. Notable reserved words include `class`, and `super`, but you can use `className` and `superMan`.
 
 ### Naming Conventions
 
@@ -43,7 +45,7 @@ By convention, JavaScript programmers use so-called `camelCase` for their variab
 
 You may also see variables named with `snake_case`, where the whole name is lowercase and words are separated with underscores `_`.
 
-**Best Practice**: Code should always look like it has been written consistantly by a single person, even when written by a team. Use `camelCase` or `snake_case`, but remain consistent. When editing other people's code, obey the conventions you see being followed. "When in Rome, do as the Romans do."
+**Best Practice**: Code should always look like it has been written consistently by a single person, even when written by a team. Use `camelCase` or `snake_case`, but remain consistent. When editing other people's code, obey the conventions you see being followed. "When in Rome, do as the Romans do."
 
 <!-- you can't emphasise clear naming enough - feel free to repeat this frequently -->
 
@@ -57,7 +59,7 @@ It's best to use American English spelling where it matches HTML or CSS, most no
 
 That said, some are universally accepted, such as `id` for identifier and `i` for iteration.
 
-**Code Smell**: If you find yourself using variables such as `book1`, `book2`, `book3` and so on, you probably want an **Array**, a ordered collection of values. We'll explain arrays later. However, breaking a line into two parts, such as `address1` and `address2` is a notable exception.
+**Code Smell**: If you find yourself using variables such as `book1`, `book2`, `book3` and so on, you probably want an **Array**, an ordered collection of values. We'll explain arrays later. However, breaking a line into two parts, such as `address1` and `address2` is a notable exception.
 
 ## Initial Values - `undefined`
 
@@ -136,7 +138,7 @@ console.log(chunkyBacon);
 ```
 <samp>Error: Uncaught ReferenceError: chunkyBacon is not defined.</samp>
 
-*Best Practice*: To resolve this, make sure you define the variable in a statement before the line where you use the variable. If you already, *check your spelling* as one of them is probably spelled wrong or inconsistently.
+*Best Practice*: To resolve this, make sure you define the variable in a statement before the line where you use the variable. If you already have, *check your spelling* as one of them may be spelt wrong or inconsistently.
 
 
 ## Defining multiple variables at once
