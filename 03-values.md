@@ -5,9 +5,9 @@ layout: page
 
 Programs tell computers what to do. What do computers do best? Computation.
 
-Computation is about about *systematic application of rules*, or doing certain things in a certain order when certain conditions are met. This is called *logic*
+Computation is about about *systematic application of rules*, or doing certain things in a certain order when certain conditions are met. This is called *logic*.
 
-Note that computation says nothing about maths! Performing arithmetic and doing mathematics is called *calculation*
+Note that computation says nothing about maths! Performing arithmetic and doing mathematics is called *calculation*.
 
 Computers are very efficient at calculations, but we as programmers have to tell them what to do and when to do it.
 
@@ -27,7 +27,7 @@ Numbers in JavaScript can be whole numbers, called *integers* or have decimal pl
 
 While you may never intentionally use them, you might see numbers ending with `e+01` or `e-01` in some circumstances. These are called *exponents*: multiply the preceding number by this number of powers of ten. JavaScript automatically converts very large numbers to exponents where necessary. Honestly though, you won't see exponents in common use.
 
-### Numerical Equivelence
+### Numerical Equivalence
 
 ```js
 alert(100.00);
@@ -107,7 +107,7 @@ Using this escaping technique, we can also encode other characters into a string
 
 There are others too.
 
-**Aside**: In terms of English punctation, the backslash character was invented in 1961 specifically for computing. It was included in ASCII along with the regular forward-leaning slash so up `/\` and `\/` down arrow symbols could be typed.
+**Aside**: In terms of English punctuation, the backslash character was invented in 1961 specifically for computing. It was included in ASCII along with the regular forward-leaning slash so up `/\` and `\/` down arrow symbols could be typed.
 
 <!-- Concatenation could be introduced here? -->
 
@@ -127,6 +127,6 @@ Boolean values are very important. Computers work logically and in binary: true 
 * `true`
 * `false`
 
-Boolean values represent a non-numerical logic state. They are called *Boolean logic* values, or just `Booleans`. Booleans are named after 19th-century English mathematician George Boole (hence  why Boolean is always capitalised). His Boolean logic dictates that something logic describes is either true or false, not both or neither, and not somewhere between.
+Boolean values represent a non-numerical logic state. They are called *Boolean logic* values, or just `Booleans`. Booleans are named after 19th-century English mathematician George Boole (hence why Boolean is always capitalised). His Boolean logic dictates that something logic describes is either true or false, not both or neither, and not somewhere between.
 
 Booleans are extremely useful in programming when it comes to testing for a certain condition. For example, is 12 less than 15? Yes, 12 is less than 15. The answer to questions like this is either true or false. It is never both, neither, fuzzy or unknown.
