@@ -1,5 +1,5 @@
 ---
-title: 01 – Client Side Javascript
+title: 01 – Client Side JavaScript
 layout: page
 ---
 JavaScript is the most used programming language in the world - nearly every web page uses JavaScript in some way or another.
@@ -18,9 +18,7 @@ This book focuses on JavaScript in the web browser, and will not be touching on 
 
 ### The Web Browser
 
-Browsers are simply programs designed to interpret client side code in order to create web pages to display. The code, along with the content, is separated by the browser into four layers:
-
-Web pages can be broken into four layers:
+Browsers are simply programs designed to interpret client-side code in order to create web pages to display. The code, along with the content, is separated by the browser into four layers:
 
 1. Content (text, pictures, video, audio) – **Plain Text**
 2. Document Semantics or 'markup' (headings, paragraphs, links, etc.) – **HTML**
@@ -37,7 +35,7 @@ This introductory course will only be exploring JavaScript in the web browser.
 
 1. In an HTML file, placing script between &lt;script&gt; tags.
 2. In a separate `.js` file, referenced by HTML files.
-3. When developing, Javascript can be written directly into the "developer console".
+3. When developing, JavaScript can be written directly into the "developer console".
 
 ### 1. HTML Files
 
