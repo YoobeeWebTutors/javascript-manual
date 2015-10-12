@@ -7,7 +7,7 @@ What can we do with values? Make new values from old ones. These are called *ope
 
 We use *operators* to signify that we wish to perform these operations.
 
-Operations are performed on one, two or three other values, called *operands*
+Operations are performed on one, two or three other values, called *operands*.
 
 ## Assignment Operator
 
@@ -34,7 +34,7 @@ Addition is performed with the `+` operator.
 
 `14 % 4` is 2. Because an integer division is happening, 14 ÷ 4 is 3 remainder 2.
 
-While `%` is often called the 'modulo' operator in other languages, in Javascript `%` is not a true modulo on account of how negative operands are treated.
+While `%` is often called the 'modulo' operator in other languages, in JavaScript `%` is not a true modulo on account of how negative operands are treated.
 
 ## Strings and Concatenation
 
@@ -81,7 +81,7 @@ With `!` the logical NOT operator, it only takes one operand, and the value of t
 * `! false` is true
 
 
-**Aside**: The `&` symbol is called an *ampersand*, and the `|` is called the *vertical bar*, or in a command line interface a *pipe*
+**Aside**: The `&` symbol is called an *ampersand*, and the `|` is called the *vertical bar*, or in a command line interface a *pipe*.
 
 If an operand for a Boolean operator is not a Boolean value, it will be type coerced into a Boolean value.
 
@@ -126,7 +126,7 @@ Mathematics has a standard 'order of operations', often memorised as PEMDAS or B
 
 According to PEMDAS, `9 + 9 * 9` evaluates to `90`.
 
-In programming, every operator takes a place in the language's order of operations hierarchy. All languages follow the order above, but there are more operators Most languages share the same order, but not all. Check out [JavaScript's Order of Operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
+In programming, every operator takes a place in the language's order of operations hierarchy. All languages follow the order above, but there are more operators. Most languages share the same order, but not all. Check out [JavaScript's Order of Operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 The `=` assignment operator is very low in the order of operations, and thus all other calculations happen before a value is assigned to a variable.
 
@@ -147,9 +147,9 @@ Multiplication and division actually share the same level in the order, as do ad
 
 Because the order of operations is hard to memorise, its best to be explicit with what order of operations you the programmer intend, by using parentheses to group operands with the desired operators.
 
-* `9 + 9 * 9` -> 90 – the order of operations will be applied
+* `9 + 9 * 9` -> 90 – the order of operations will be applied.
 * `9 + (9 * 9)` -> 90 – here the parentheses are optional, but document the intent.
-* `(9 + 9) * 9` -> 162 – parentheses are required to override default order of operations
+* `(9 + 9) * 9` -> 162 – parentheses are required to override default order of operations.
 
 ## Documenting Values with Variables
 
@@ -162,7 +162,7 @@ var total = quantity * 9;
 
 *Bad Practice*: The `9` here is referred to as a *magic number* – it's unclear what it actually represents. Maybe you've figured out that `9` is the unit price, but you had to think about it, didn't you.
 
-*Best Practice*: Document what a value is by putting it in a variable. We'll also make sure that it's clear we're calculating a price and not a unit total This makes for very readable code:
+*Best Practice*: Document what a value is by putting it in a variable. We'll also make sure that it's clear we're calculating a price and not a unit total. This makes for very readable code:
 
 ```js
 var unitPrice = 9;
@@ -217,13 +217,13 @@ The output shows us the result of the computation, along with reiterating to us 
 
 ### Program Execution - Statement by Statement
 
-Programs are stepped through statement by statement. This program has four statements, seperated by semicolons.
+Programs are stepped through statement by statement. This program has four statements, separated by semicolons.
 
 The first statement creates a variable called `coffeeQuantity` and assigns it the value `3`.
 
 The next line creates a variable called `pricePerCoffee` and assigns it the value `3.6`.
 
-Next line creates a variable called `totalPrice`
+Next line creates a variable called `totalPrice`.
 
 * `var totalPrice`
 
@@ -258,9 +258,9 @@ This one string is given to `console.log()` as its parameter. The function will 
 # Exercises
 Write a new program for each of these points below. Each program should output what the input was along with the computed value.
 
-* Bagels cost $4.35 each (before tax). Write a program to calculate how much 9 bagels costs and output the total. Your program should output the answer $39.15.
-* Scones cost $0.60 each. Write a program to calculate and output the total price of 27 scones. You should get 16.2.
-* It costs me $3.80 to make 13 muffins. How much did each muffin cost to make? The answer is appx $0.29 each, but write a program to calculate this.
+* Bagels cost $4.35 each (before tax). Write a program to calculate how much 9 bagels cost and output the total. Your program should output the answer $39.15.
+* Scones cost $0.60 each. Write a program to calculate and output the total price of 27 scones. You should get $16.2.
+* It costs me $3.80 to make 13 muffins. How much did each muffin cost to make? The answer is approximately $0.29 each, but write a program to calculate this.
 * I have $100. How many bagels can I buy with that? The answer is 22, but write a program to do the calculation.
   * The most sensible program uses a function that JavaScript provides to round a number down – go look it up. However, it is possible to program this using `+`,`-`,`*`, `/` and one of either `parseInt` or `%`.
 * How many scones can I buy with $100? 166, but write the program.
