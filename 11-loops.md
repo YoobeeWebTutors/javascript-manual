@@ -3,7 +3,7 @@ title: 11 – Loops
 layout: page
 ---
 
-Computers are very good at doing repetitive tasks. How do we get computers to do something  repeatedly until some condition is met?
+Computers are very good at doing repetitive tasks. How do we get computers to do something repeatedly until some condition is met?
 
 A trivial example might be we want to show a string five times:
 
@@ -45,7 +45,7 @@ Before it runs the loop block, it will check to see if `outputCount` is greater 
 
 ## Exercise — Infinite Loops
 
-It's very easy to write an *infinite loop* - a loop that doesn't end. Browsers these days will detect that a section of code hasn't ended for a few seconds and will prompt the user  that the page has stopped responding, giving you your exit from the infinite loop.
+It's very easy to write an *infinite loop* - a loop that doesn't end. Browsers these days will detect that a section of code hasn't ended for a few seconds and will prompt the user that the page has stopped responding, giving you your exit from the infinite loop.
 
 You'll want this message while you're programming, but you'll never want your users to see this message because they may come to believe your page or site is broken.
 
@@ -90,7 +90,7 @@ for (var i = 0; i < 10; i += 1) {
 }
 ```
 
-A `for` loop is just like a `while` loop. It may not run the block code at all. The main  difference however is the loop control statements are grouped together in the `for` parameters, rather than dotted around the `while` statement.
+A `for` loop is just like a `while` loop. It may not run the block code at all. The main difference however is the loop control statements are grouped together in the `for` parameters, rather than dotted around the `while` statement.
 
 The first parameter is the *initialiser* statement: the statement here will only be run once, before the first time through the loop. It is used to initialise the count variable.
 
@@ -129,12 +129,12 @@ alert("You know the password? Awesome! Have a squishy, yellow day!");
 ```
 
 ## Exercises
-* Make a loop that outputs an asterisk `*` for every character in a string
-  * do some research on getting the length of a string value
-* Make a loop that outputs every number from 1 to 100
-* Make a loop that outputs every even number, starting at 100, going to 0 (aka descending order)
-* *Fizz-Buzz*: Output every number between 1 and 100, except when the number divides evenly by 3 or 5: instead of the number, output "fizz" or "buzz" respectively, and output "fizzbuzz" when it evenly divisible by both.
-* *99 Bottles…*: Write a program to output the lyrics to the song "99 bottles of beer" as found on http://www.99-bottles-of-beer.net/lyrics.html -- there are answers on that site, but none of them are actually simple, nor get the lyrics exactly right.
+* Make a loop that outputs an asterisk `*` for every character in a string.
+  * do some research on getting the length of a string value.
+* Make a loop that outputs every number from 1 to 100.
+* Make a loop that outputs every even number, starting at 100, going to 0 (aka descending order).
+* *Fizz-Buzz*: Output every number between 1 and 100, except when the number divides evenly by 3 or 5: instead of the number, output "fizz" or "buzz" respectively, and output "fizzbuzz" when it's evenly divisible by both.
+* *99 Bottles…*: Write a program to output the [lyrics to the song "99 bottles of beer"](http://www.99-bottles-of-beer.net/lyrics.html) -- there are answers on that site, but none of them are actually simple, nor get the lyrics exactly right.
 * Make a Christmas tree out of asterisks.
 
 ## Research
