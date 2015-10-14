@@ -107,7 +107,7 @@ Using this escaping technique, we can also encode other characters into a string
 
 There are others too.
 
-**Aside**: In terms of English punctuation, the backslash character was invented in 1961 specifically for computing. It was included in ASCII along with the regular forward-leaning slash so up `/\` and `\/` down arrow symbols could be typed.
+**Aside**: In terms of English punctation, the backslash character was invented in 1961 specifically for computing. It was included in ASCII along with the regular forward-leaning slash so up `/\` and `\/` down arrow symbols could be typed.
 
 <!-- Concatenation could be introduced here? -->
 
