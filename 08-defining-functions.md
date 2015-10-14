@@ -26,7 +26,7 @@ Here the function `hello` is being defined. The keyword `function` here is kind 
 
 ## Formatting
 
-The `hello` function is followed a space and parentheses. The parentheses form the *parameter declaration*: what variables will be used to capture values passed to the function.
+The `hello` function is followed by a space and parentheses. The parentheses form the *parameter declaration*: what variables will be used to capture values passed to the function.
 
 The `{ }` *curly braces* here create a group of statements, called a *block*. The statements contained within will become the body of the function.
 
@@ -34,7 +34,7 @@ The `{ }` *curly braces* here create a group of statements, called a *block*. Th
 ```js
 function terriblyFormatted(poorleeSpelld)
 {
-var inconsistant      = "spacing" ;
+var inconsistent      = "spacing" ;
     if  ( condition ==="notOnOwnLine") { callNotObvious    (
       bracesNotEasyToSeePair();
       missingSemicolon()
@@ -56,9 +56,9 @@ Coding style varies from language to language. JavaScript doesn't really mind wh
 
 Both the examples above are valid JavaScript, but `wellFormatted` is much easier to read, modify and thus maintain.
 
-There are [many popular 'coding guides'](http://en.wikipedia.org/wiki/Programming_style), but we will teach you the most common, often called 1TCS or [One True Coding Style](http://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS).
+There are [many popular 'coding guides'](https://en.wikipedia.org/wiki/Programming_style), but we will teach you the most common, often called 1TCS or [One True Coding Style](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS).
 
-Different teams and projects use different styles for different languages. HTML will have one, CSS another, JavaScript yet another.
+Different teams and projects use different styles for different languages. HTML will have one, CSS another, JavaScript yet another and so on.
 
 Curly braces are usually placed one space after the parameter parentheses to open, and on a line by itself to close. The closing bracket should be in the same column as the first character of the function declaration.
 
@@ -73,7 +73,7 @@ BT 27/2/15: Leaving this to the tutor to teach during HTML and CSS. Students sho
 
 Some editors type hard tabs: the control character Horizontal Tab (ASCII code 9, `\t`). This traditionally has been rendered as eight spaces, the same as typewriters would. Some editors will type soft-tabs, substituting `\t` for eight, four or two actual space characters. Most editors will allow for both, letting you change the setting in the application's preferences.
 
-***Aside***: The *Python* programming language actually uses hard tabs to represent code blocks, making indentation a integral part of the code.
+***Aside***: The *Python* programming language actually uses hard tabs to represent code blocks, making indentation an integral part of the code.
 
 As a programmer, your job is to learn the style being used in the code you are working on and work to it. Good code looks like it was written completely by one person, even though it may have been written by a small army over a period of time.
 
@@ -241,7 +241,7 @@ outputCoffeePrice(pricePerCoffee, coffeeQuantity, totalPrice);
 
 ```
 
-This function accepts three values as *parameters*
+This function accepts three values as *parameters*.
 
 Much better! Our code is much more maintainable. If we want to change the output message, we can do it in one place.
 
@@ -262,7 +262,7 @@ In JavaScript, variables are scoped to functions. Variables defined inside funct
 
 Variables not declared in any function are said to be *global scoped*. This means the variable can be accessed from anywhere, including inside any function. This might sound great, but it is considered bad practice to define global variables.
 
-To see why global variables are bad, consider this example. On a typical web page you may have many different  JavaScript programs running. If these programs used global variables, they may unintentionally use the same variable names as each other. This means one variable could be being shared across more than one programs. If one program overwrites such a variable, the other program will use the unintended value, which is bad.
+To see why global variables are bad, consider this example. On a typical web page you may have many different JavaScript programs running. If these programs used global variables, they may unintentionally use the same variable names as each other. This means one variable could be being shared across more than one program. If one program overwrites such a variable, the other program will use the unintended value, which is bad.
 
 ## Globally-Scoped Variables
 ```js
@@ -276,7 +276,7 @@ function greet () {
 greet();
 ```
 
-Because `greeting` is declared outside or the `greet` function, the function has access to it.
+Because `greeting` is declared outside of the `greet` function, the function has access to it.
 
 
 ## Locally-Scoped Variables
@@ -293,7 +293,7 @@ In the code above, the variable `greeting` only exists inside the `greet()` func
 
 ## Locally-scoped Variables Obscure Globally-scoped Variables
 ```js
-var message = "bye"
+var message = "bye";
 
 function goodbye () {
   var message = "farewell";
@@ -303,7 +303,7 @@ function goodbye () {
 goodbye();
 console.log(message);
 ```
-In this code, there are two variables called `message`. One is globally scoped, one is scoped to `goodbye()`. They both contain different values.
+In this code, there are two variables called `message`. One is globally scoped and the other is scoped to `goodbye()`. They both contain different values.
 
 Because a `message` variable is being declared inside `goodbye()`, it obscures access to the global `message`.
 
