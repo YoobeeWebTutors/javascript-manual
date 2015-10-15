@@ -6,7 +6,7 @@ layout: page
 <!-- I like the idea of introducing common errors that they will see. When they are relevant, rather than in one lump, although we might have a chapter (appendix?) on debugging where everything is lumped together?? -->
 
 ## General Tips
-* Use the line number provided with the error to find where in your code the error is occuring.
+* Use the line number provided with the error to find where in your code the error is occurring.
 * The error may not be on the line that reports the error. Check the line directly above for errors, and check other lines that use variables being referenced by the code on these two lines.
 
 ```
