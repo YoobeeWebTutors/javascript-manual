@@ -9,5 +9,5 @@ layout: page
 - .getMonth() => 0..11
 - .getDay() => 0..6, 0 = Sunday
 - awareness of its many methods
-- awareness of timezones
+- awareness of time zones
   - www.youtube.com/watch?v=-5wpm-gesOY
