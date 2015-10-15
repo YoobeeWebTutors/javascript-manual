@@ -3,7 +3,7 @@ title: 12 – Strings
 layout: page
 ---
 
-A string value are made out of sequence of characters.
+A string value is made out of a sequence of characters.
 
 ```js
 "Hello, world!"
@@ -11,7 +11,7 @@ A string value are made out of sequence of characters.
 "中文 español English русский 日本語"
 ```
 
-These characters are numbers, letters, symbols, punctation, and really any character in Unicode.
+These characters are numbers, letters, symbols, punctuation, and really any character in Unicode.
 
 # `length` Property
 
@@ -38,7 +38,7 @@ do {
 
 The `.` operator used here is called the 'member' operator. It lets us access properties (and shortly, methods) that are attached to values.
 
-We've seen this operator in use: `console.log()`. `console` is an object: a collection of properties. `log` is a property of `console`. Because the `log` property contains a function we can call with `()`, we refer to `log` as a *method*; a function that is a property of an object is called a method..
+We've seen this operator in use: `console.log()`. `console` is an object: a collection of properties. `log` is a property of `console`. Because the `log` property contains a function we can call with `()`, we refer to `log` as a *method*; a function that is a property of an object is called a method.
 
 Strings have properties and methods. Strings only have the one property: `length`. Strings do have a lot of methods. We'll go over the most useful ones here.
 
@@ -67,7 +67,7 @@ var spaceMovies = "   Star Trek, Star Wars, Galaxy Quest,     Spaceballs       "
 console.log(spaceMovies.trim()); // "Star Trek, Star Wars, Galaxy Quest,     Spaceballs"
 ```
 
-While `trim()` works in all modern browsers, it is a relatively new addition. Most noticably, `trim()` doesn't work in Internet Explorer 8 and below.
+While `trim()` works in all modern browsers, it is a relatively new addition. Most noticeably, `trim()` doesn't work in Internet Explorer 8 and below.
 
 # Character Methods
 
@@ -140,7 +140,7 @@ name.substr(5, 10); // "ley"
 
 Note that we can provide a negative startIndex. This will count back from the end of the string.
 
-We can use in a loop to do something pretty neat:
+We can use it in a loop to do something pretty neat:
 
 ```js
 var name = "Aperture";
@@ -222,7 +222,7 @@ console.log(boat.lastIndexOf("r")); // 11
 console.log(boat.lastIndexOf("r", 11 - 1)); // 6
 ```
 
-To find all occurances of the letter 'r' in a string, we can do this:
+To find all occurrences of the letter 'r' in a string, we can do this:
 
 ```js
 var pirate = "Arr! Shiver me timbers and Raise the anchor!";
@@ -236,8 +236,8 @@ while (pirate.indexOf("r", i) > -1) {
 
 ## Exercises
 * Write a function that only returns true if its first parameter is a string longer than ten characters.
-* Write a function that checks if the string contains the characters 'pip'. Extra for experts: Write it without `indexOf` or `lastIndexOf`
+* Write a function that checks if the string contains the characters 'pip'. Extra for experts: Write it without `indexOf` or `lastIndexOf`.
 * Write a function that returns a count of the number of vowels in a string.
-* Write a function that 'disemvowels' a string. Return the input string missing the characters 'AEIOUaeiou'. "Banana" -> "Bnn"
-* Write a function that reverses a string. "Banana" becomes "ananaB"
+* Write a function that 'disemvowels' a string. Return the input string missing the characters 'AEIOUaeiou'. "Banana" -> "Bnn".
+* Write a function that reverses a string. "Banana" becomes "ananaB".
 * Write a function that detects palindromes. It should return true for "bob", "Tacocat", "A Toyota's a Toyota", "Go hang a salami, I'm a lasagna hog!", and false for "Banana" and "Nyan Cat". You will have to create a string that contains only the letters, reverse that string and check if it is the same.

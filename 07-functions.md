@@ -68,11 +68,11 @@ You've already used some of JavaScript's built-in functions:
 
 All these functions take a value, in order to do something with that value. Some of these functions return useful values that can be used in our own programming.
 
-JavaScript has plenty more built in functions for you to research and discover. Let's look at some of the built in functions you'll find most useful at this stage:
+JavaScript has plenty more built-in functions for you to research and discover. Let's look at some of the built-in functions you'll find most useful at this stage:
 
 ### Modal functions
 
-* `alert("for your information")`
+* `alert("for your information");`
 * `var performDelete = confirm("Do you want to delete that?");`
 * `var username = prompt("What's your name?");`
 
@@ -82,7 +82,7 @@ These three functions are *modal* -- they pause the whole browser tab from doing
 
 #### alert( *message* );
 
-When the browser executes the `alert()` function, the browser will display a little window with your message in it, and clicking the OK button, pressing Enter or pressing Escape will dismiss it.
+When the browser executes the `alert()` function, the browser will display a little window with your message in it, and clicking the OK button, pressing Enter or pressing Escape will dismiss it. If the website uses a lot of alert modals, your browser may ask you if you'd like to ignore any future alerts.
 
 `alert()` always returns `undefined`.
 
@@ -100,7 +100,7 @@ If the second parameter *defaultValue* is provided, the text field will initiall
 
 If the user clicks OK or presses Enter, `prompt()` returns the string entered into the text field. `prompt()` always returns a string, even when you enter a valid number. If you want a number, coerce the value `prompt()` returns into a number before you treat it as one.
 
-If the user clicks Cancel or presses Escape, `prompt()` returns `null`. `null` is another value similar to `undefined` but represents the purposeful value of nothing. `null` is not a string, number or boolean.
+If the user clicks Cancel or presses Escape, `prompt()` returns `null`. `null` is another value similar to `undefined` but represents the purposeful value of nothing. `null` is not a string, number or Boolean.
 
 ### Development Console functions
 

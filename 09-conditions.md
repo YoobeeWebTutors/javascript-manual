@@ -98,7 +98,7 @@ This might seem correct at first glance, but it's not what you actually mean to 
 
 In JavaScript, the condition on the left of the `||` operator is `name === "Felix"`, which could be `true` or `false`.
 
-The other condition is just `"Ralph"`, which by itself is a non-empty string. The `||` operator can only work with Boolean values, so  the non-empty string will be coerced to `true`.
+The other condition is just `"Ralph"`, which by itself is a non-empty string. The `||` operator can only work with Boolean values, so the non-empty string will be coerced to `true`.
 
 Because one side of the `||` operator is always `true`, it will always evaluate to `true`. Even when `var name = "Bob";`.
 

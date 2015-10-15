@@ -8,5 +8,5 @@ and  to our favourite web resources as well ?? -->
 
 Here are a list of up to date resources (at time of last update)
 
-* [Mozilla Developer Network: JavaScript](http://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Mozilla Developer Network: JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [*JavaScript: Novice to Ninja*, Darren Jones (Sitepoint, 2015)](http://www.sitepoint.com/store/leaern-javascript-novice-to-ninja/)

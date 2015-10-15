@@ -37,7 +37,7 @@ Numbers are coerced to strings as they would be output normally.
 * `!! "banana"` is coerced to true
 * `!! ""` is coerced to false
 
-`0` will be coerced to a boolean `false`, every other number will be `true`. `""` (empty string) is coerced to `false`
+`0` will be coerced to a Boolean `false`, every other number will be `true`. `""` (empty string) is coerced to `false`.
 
 Values that coerce to `true` are called *truthy*, and values that coerce to `false` are called *falsy*. They're not literally `true` or `false` but they're not far from it.
 
@@ -47,7 +47,7 @@ Values that coerce to `true` are called *truthy*, and values that coerce to `fal
 
 When JavaScript cannot do a sensible type coercion, we get the very useless value `NaN`, representing a numeric value that is not a number.
 
-While it would be much more useful to get an error when this happens when a statement is executed, we don't get an error, and JavaScript will carry on to the next statement.
+While it would be much more useful to get an error when a statement like this is executed, we don't get an error, and JavaScript will carry on to the next statement.
 
 ```js
 var a = 10;
@@ -88,11 +88,11 @@ The first parameter is a string that (hopefully) has a number in it. `Number()` 
 
 <!-- what will happen if there is not a number in it -->
 
-**Aside**: `Number()` starts a capital letter because the function is also the object prototype for all number values. While this will be explained more later, functions should always start with a lower-case letter, but start with a capital letter if they are object prototypes.
+**Aside**: `Number()` starts with a capital letter because the function is also the object prototype for all number values. While this will be explained more later, functions should always start with a lower-case letter, but start with a capital letter if they are object prototypes.
 
 These functions are actually a bit more useful than the automatic type coersion, as they are a bit more liberal in ignoring any trailing non-number string characters, and thus may return `NaN` less than type coersion.
 
-For `parseInt`, it takes the two parameters.  The first is the same as `parseFloat()`, but the second parameter is a radix: the base the number is in. Usually you want `10` for base-10, but you can use any number between 2 and 36. Always provide the radix, otherwise older browsers' JavaScript intepreters will try to guess the base of the number, and may get it wrong.
+For `parseInt`, it takes the two parameters.  The first is the same as `parseFloat()`, but the second parameter is a radix: the base the number is in. Usually you want `10` for base-10, but you can use any number between 2 and 36. Always provide the radix, otherwise older browsers' JavaScript interpreters will try to guess the base of the number, and may get it wrong.
 
 <!-- define radix -->
 
@@ -107,7 +107,7 @@ To coerce a number into a string, just concatenate an empty string to the number
 
 * `!! value` – double Boolean NOT
 
-You may see `!!` in use: this is a double NOT. `!!` is often used to convert other value types to booleans, following the automatic rules above.
+You may see `!!` in use: this is a double NOT. `!!` is often used to convert other value types to Booleans, following the automatic rules above.
 
 <!-- examples reqd I think - when might we see this -->
 

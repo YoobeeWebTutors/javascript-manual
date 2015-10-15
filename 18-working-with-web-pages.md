@@ -33,11 +33,11 @@ These properties contained NodeList objects. A NodeList is a collection of eleme
 
 Once we have an element, we can look at and manipulate some of its properties.
 
-- `element.value` -- the current value of the form element
-- `element.checked` -- if a checkbox or radio box is checked or not
-- `element.name` -- the name attribute of an element
-- `element.type` -- the type attribute of a form element
-- `element.href` -- the href attribute of a link
+- `element.value` -- the current value of the form element.
+- `element.checked` -- if a checkbox or radio box is checked or not.
+- `element.name` -- the name attribute of an element.
+- `element.type` -- the type attribute of a form element.
+- `element.href` -- the href attribute of a link.
 - `element.text` -- the text inside an link or anchor.
 
 For the curious:
@@ -53,10 +53,10 @@ Level 1 also added the ability to add, move and delete elements, but this too wa
 
 DOM Level 1 formalised many properties on an element too, the most useful being:
 
-- `element.id` -- the id attribute of an element
-- `element.title` -- the title attribute of an element
-- `formelement.disabled` -- the disabled attribute of a form element
-- `formelement.readOnly` -- the readonly attribute of a form element
+- `element.id` -- the id attribute of an element.
+- `element.title` -- the title attribute of an element.
+- `formelement.disabled` -- the disabled attribute of a form element.
+- `formelement.readOnly` -- the read-only attribute of a form element.
 
 ## DOM Level 2
 
@@ -89,11 +89,11 @@ DOM 2 also added support for working with CSS.
 - `element.className` -- the class attribute of an element.
 - `element.style` -- an object representing the CSS properties applied directly to the element, initially via the style attribute.
 
-Microsoft had always broken away from the standards, but for the first time, made something so useful that other browsers imitated:
+Internet Explorer had always broken away from the standards, but for the first time, made something so useful that other browsers imitated:
 
 - `element.innerHTML` -- view or replace the contents of an element, including creating new elements inside it.
 
-***Aside***: Microsoft has continued bucking the standards, and would go on to have success with XMLHttpRequest, what we now know as AJAX.
+***Aside***: Internet Explorer has continued bucking the standards, and would go on to have success with XMLHttpRequest, what we now know as AJAX.
 
 With DOM Level 2 making everything on the page fair game, and `innerHTML` making modifications really easy, pages using JavaScript really exploded.
 
@@ -112,13 +112,13 @@ for (var i = 0; i < articlesList.length; i += 1) {
 
 ## DOM Level 3
 
-DOM Level 2 most notably improved the Event model, and DOM Level 3 added further support for more events, among other things. I've purposefully avoided mentioning events here, We'll look at events in the next chapter.
+DOM Level 2 most notably improved the Event model, and DOM Level 3 added further support for more events, among other things. I've purposefully avoided mentioning events here, we'll look at events in the next chapter.
 
-Level 3 became rapidly supported in Firefox and Apple's Safari (i.e. Webkit, which went on to be used in Google Chrome), and was eventually supported in IE 9.
+Level 3 became rapidly supported in Firefox and Apple's Safari (i.e. WebKit, which went on to be used in Google Chrome), and was eventually supported in IE 9.
 
 ## DOM Level 4 - HTML 5
 
-When WHAT-WG started working on would what eventually become HTML 5, many non-standards things (such as `innerHTML`) became part of the standard for the first time. HTML 5 also codified improvements to the DOM, including these methods to find elements with the CSS selector syntax:
+When WHAT-WG started working on would what eventually become HTML5, many non-standards things (such as `innerHTML`) became part of the standard for the first time. HTML5 also codified improvements to the DOM, including these methods to find elements with the CSS selector syntax:
 
 ### `document.querySelector( cssSelectorString )`
 ### `element.querySelector( cssSelectorString )`
@@ -144,11 +144,11 @@ You can get quite expressive with CSS Selectors and these two methods.
 
 ### `element.classList[]`
 
-HTML 5 also formalised the `classList` collection. Instead of working with the `className` property (which is a string matching the class attribute of an element), we can easily manage adding and removing classes with ease. Each item in this array-like object represents each individual class applied to that element. The object also has methods:
+HTML5 also formalised the `classList` collection. Instead of working with the `className` property (which is a string matching the class attribute of an element), we can easily manage adding and removing classes with ease. Each item in this array-like object represents each individual class applied to that element. The object also has methods:
 
-* `element.classList.contains( string )` -- returns true if this element has that class on it
-* `element.classList.add( string )` -- adds the class if not already present
-* `element.classList.remove( string )` -- removes the class if already present
+* `element.classList.contains( string )` -- returns true if this element has that class on it.
+* `element.classList.add( string )` -- adds the class if not already present.
+* `element.classList.remove( string )` -- removes the class if already present.
 * `element.classList.toggle( string )` -- adds the class if not already present or removes the class if already present.
 
 `classList` is well supported, but only got introduced into Internet Explorer in version 10, and still has some minor issues in IE11. There is a polyfill to add `classList` to older browsers.

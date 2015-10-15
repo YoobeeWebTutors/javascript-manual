@@ -39,7 +39,7 @@ To be able to understand how regular expressions are interpreted by the computer
 var catPattern = /cat/;
 ```
 
-Regular Expressions are JavaScript objects. They can be created literally by including your regex pattern inside a pair of forwardslashes `/`. You can also declare them with `new RegExp("cat")`, but there are sometimes problems encoding regular expression patterns as strings. You get the same thing either way.
+Regular Expressions are JavaScript objects. They can be created literally by including your regex pattern inside a pair of forward slashes `/`. You can also declare them with `new RegExp("cat")`, but there are sometimes problems encoding regular expression patterns as strings. You get the same thing either way.
 
 ## Testing for a match
 
@@ -93,7 +93,7 @@ console.log( "recieve recieve".replace( /ie/g, "ei") ); // "receive receive" -- 
 ![simpleEmailPattern visualised as a railroad diagram](images/regulex-simple-email.png)
 
 ```js
-var simpleEmailPattern = /^.*(@.*)$/; // a whole string with any number of any chara
+var simpleEmailPattern = /^.*(@.*)$/; // a whole string with any number of any characters
 
 console.log( "bob@example.com".replace(simpleEmailPattern, "brett$1") ); // brett@example.com
 ```
