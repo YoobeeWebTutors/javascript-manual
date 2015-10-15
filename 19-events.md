@@ -5,7 +5,15 @@ layout: page
 
 Up until now, our code has been running when the page hits the `<script>` element. It runs while the page is loading.
 
-We often don't want our JavaScript code to run until some particular thing happens. The page finishes loading. A button is clicked. A key on the keyboard is pressed. The mouse moves into an element. Some time passes. These are all DOM *events*.
+We often don't want our JavaScript code to run until some particular thing happens. For example:
+
+* The page finishes loading.
+* A button is clicked.
+* A key on the keyboard is pressed.
+* The mouse moves into an element.
+* Some time passes.
+
+These are all DOM *events*.
 
 We want to know when certain events occur to certain elements, and when they do, we want a part of our code to start running. To do this, we must find the element we're interested in, then register a function as an *event listener*.
 
@@ -58,10 +66,10 @@ There are many useful events to listen for. Here are the most common and useful 
 
 * `DOMContentLoaded` -- fires when the elements inside the element being listened to have all been downloaded and put on the page. This triggers before all the resources are downloaded.
 * `click` -- when the element is clicked or activated via the keyboard.
-* `focus` -- when the element receives keyboard focus, such as a link or input field
-* `blur` -- when the element loses keyboard focus
+* `focus` -- when the element receives keyboard focus, such as a link or input field.
+* `blur` -- when the element loses keyboard focus.
 * `change` -- when an input, textarea, or select element value is committed (usually when element loses keyboard focus and its value has changed since it gained focus).
-* `submit` -- when the form element is submitted (by a submit button being clicked or otherwise triggering the submit)
+* `submit` -- when the form element is submitted (by a submit button being clicked or otherwise triggering the submit).
 
 Less common but no less useful:
 
@@ -121,7 +129,7 @@ For some events, you can also find out what modifier keys were being held down w
 
 When certain events are triggered by the user, there are default actions that occur even without JavaScript. Clicking a link will navigate the window to its destination. Clicking a submit button will cause the form to send its data and navigate to the resulting page. These are usually intended, but sometimes you want to prevent them from happening.
 
-To prevent a default action from occuring, we must run the `preventDefault()` method on the event object passed into the event listener function.
+To prevent a default action from occurring, we must run the `preventDefault()` method on the event object passed into the event listener function.
 
 ```js
 var navLinks = document.querySelectorAll("nav a");
