@@ -484,7 +484,7 @@ Let's add an Email field:
   </div>
 ```
 
-To validate an Email field better than HTML 5 does, we'll need a way to test for a valid email address. Put this below `needsToBeValidated`, making sure it's still inside addFormValidation:
+To validate an Email field better than HTML5 does, we'll need a way to test for a valid email address. Put this below `needsToBeValidated`, making sure it's still inside addFormValidation:
 
 ```
 function isEmail(input) {
