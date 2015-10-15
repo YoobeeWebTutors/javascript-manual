@@ -5,19 +5,19 @@ layout: page
 
 For this chapter, we'll be building a script to validate a simple contact form. Once we have it validating one form, we will extend the script so we can use it to validate almost any form.
 
-HTML 5 validation is pretty good, but isn't perfect. Some email addresses are valid when they shouldn't be. Customising the style of the error messages is possible but not consistant across browsers. At time of writing Firefox, IE and Safari Mac do not support date fields.
+HTML 5 validation is pretty good, but isn't perfect. Some email addresses are valid when they shouldn't be. Customising the style of the error messages is possible but not consistent across browsers. At time of writing Firefox, IE and Safari Mac do not support date fields.
 
-We'll be disabling HTML 5 validation and substituting our own.
+We'll be disabling HTML5 validation and substituting our own.
 
 ## Form Validator Requirements
 
 * Allow submission of form to its destination only if all the fields in the form are valid.
-* Provide helpful error messages next to each field
-* Validate a field when it loses focus (is blurred)
+* Provide helpful error messages next to each field.
+* Validate a field when it loses focus (is blurred).
 * Check if a field:
-  * is required (cannot be blank, unchecked or unselected)
-  * must be a valid email address
-  * must contain a minimum or maximum length of characters
+  * is required (cannot be blank, unchecked or unselected).
+  * must be a valid email address.
+  * must contain a minimum or maximum length of characters.
 
 ## Finished Product:
 
@@ -26,21 +26,21 @@ We'll be disabling HTML 5 validation and substituting our own.
 
 ## Simple Form
 
-Let's start with a simple form. For brevity, we'll show only the form fragment. 
+Let's start with a simple form. For brevity, we'll show only the form fragment.
 
 ```html
     <form id="contact-form" method="POST" action="success.html">
-      
+
       <div class="form-group">
         <label for="firstname">First Name</label>
         <input id="firstname" type="text" name="firstname" required>
         <span id="firstname-error"></span>
       </div>
-     
+
       <div class="form-group">
         <button type="submit">Submit</button>
       </div>
-      
+
     </form>
 ```
 
@@ -50,15 +50,15 @@ A first name field only, but the field is required. The label element is linked 
 
 What we want our form validation to do right now is:
 
-```js 
+```js
 // when the page loads:
-	// find the form 
-	// disable HTML 5 validation
-	// When the form is submitted: 
+	// find the form
+	// disable HTML5 validation
+	// When the form is submitted:
 		// check every field in this form is filled
 			// if a field is blank:
 				// give the field an error class
-				// give the error span a class and the error message. 
+				// give the error span a class and the error message.
 		// if any field is found with an error:
 			// prevent the form from submitting.
 ```
@@ -71,20 +71,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// find the form
 	var theForm = document.querySelector('#contact-form');
-	// disable HTML 5 validation
+	// disable HTML5 validation
 	theForm.noValidate = true;
 
-	// When the form is submitted: 
+	// When the form is submitted:
 		// check every field in this form is filled
 			// if a field  is blank:
 				// give the field an error class
-				// give the error span a class and the error message. 
+				// give the error span a class and the error message.
 		// if any field is found with an error:
 			// prevent the form from submitting.		
 });
 ```
 
-By setting the `noValidate` property to true, we prevent the browser from using HTML 5 style validation on this form. We could also put the `novalidate` attribute directly on the form element, but this could be omitted. We'll leave nothing to chance.
+By setting the `noValidate` property to true, we prevent the browser from using HTML5 style validation on this form. We could also put the `novalidate` attribute directly on the form element, but this could be omitted. We'll leave nothing to chance.
 
 ### Form Submissions
 
@@ -95,12 +95,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	var theForm = document.querySelector('#contact-form');
 	theForm.noValidate = true;
 
-	// When the form is submitted: 
+	// When the form is submitted:
 	theForm.addEventListener('submit', function(evt) {
 		// check every field in this form is filled
 			// if a field  is blank:
 				// give the field an error class
-				// give the error span a class and the error message. 
+				// give the error span a class and the error message.
 		// if any field is found with an error:
 			// prevent the form from submitting.		
 	});
@@ -119,7 +119,7 @@ theForm.addEventListener('submit', function(evt) {
 	// check every field in this form is filled
 		// if a field is blank:
 			// give the field an error class
-			// give the error span a class and the error message. 
+			// give the error span a class and the error message.
 
 	// if any field is found with an error:
 	if (isError) {
@@ -144,7 +144,7 @@ theForm.addEventListener('submit', function(evt) {
 		console.log(elements[i]);
 		// if a field is blank:
 			// give the field an error class
-			// give the error span a class and the error message. 
+			// give the error span a class and the error message.
 	}
 
 	if (isError) {
@@ -171,7 +171,7 @@ theForm.addEventListener('submit', function(evt) {
 	var isError = false;
 	var elements = this.elements;
 	for (var i = 0; i < elements.length; i += 1) {
-		
+
 		// get the field
 		var field = elements[i];
 
@@ -179,11 +179,11 @@ theForm.addEventListener('submit', function(evt) {
 		if (field.value.trim() === "") {
 			// we found an error
 			isError = true;
-			
+
 			// give the field an error class
 			field.classList.add('invalid');
-			
-			// give the error span a class and the error message. 
+
+			// give the error span a class and the error message.
 			var errorSpan = document.querySelector('#' + field.id + '-error');
 			errorSpan.classList.add('danger');
 			errorSpan.innerHTML = "This field is required.";
@@ -196,7 +196,7 @@ theForm.addEventListener('submit', function(evt) {
 });
 ```
 
-Here, we check the field's value property. If, after trimming it of leading and trailing spaces, it matches an empty string, the field is invalid. We set `isError` to true, and add the invalid class to the field. 
+Here, we check the field's value property. If, after trimming it of leading and trailing spaces, it matches an empty string, the field is invalid. We set `isError` to true, and add the invalid class to the field.
 
 We also find the error span for the element, set its class and output the error.
 
@@ -221,11 +221,11 @@ The submit event listener is getting quite long. Let's refactor it: we'll extrac
 			evt.preventDefault();
 		}
 	});
-	
+
 	function isFieldValid(field) {
 		if (field.value.trim() === "") {
 			field.classList.add('invalid');
-			
+
 			var errorSpan = document.querySelector('#' + field.id + '-error');
 			errorSpan.classList.add('danger');
 			errorSpan.innerHTML = "This field is required.";
@@ -239,7 +239,7 @@ The submit event listener is getting quite long. Let's refactor it: we'll extrac
 
 ### Fields that are always valid
 
-If we use the debugger, we'll discover our code works for our first name field, but it won't work for the button, as the button doesn't have an ID or an error span. 
+If we use the debugger, we'll discover our code works for our first name field, but it won't work for the button, as the button doesn't have an ID or an error span.
 
 A button element is always valid. There are several elements that we can assume are always valid, `submit`, `reset`, `button`, `hidden`, `fieldset`
 
@@ -252,9 +252,9 @@ function isFieldValid(field) {
 		return true;
 	}
 	if (field.value.trim() === "") {
-		
+
 		field.classList.add('invalid');
-		
+
 		var errorSpan = document.querySelector('#' + field.id + '-error');
 		errorSpan.classList.add('danger');
 		errorSpan.innerHTML = "This field is required.";
@@ -283,11 +283,11 @@ function isFieldValid(field) {
 		return true;
 	}
 	if (field.required && field.value.trim() === "") {
-		
+
 		// give the field an error class
 		field.classList.add('invalid');
-		
-		// give the error span a class and the error message. 
+
+		// give the error span a class and the error message.
 		var errorSpan = document.querySelector('#' + field.id + '-error');
 		errorSpan.classList.add('danger');
 		errorSpan.innerHTML = "This field is required.";
@@ -304,9 +304,9 @@ function isFieldValid(field) {
 
 At this point, the script works if we try submit the blank form, and if we correct the form, the form will submit.
 
-Let's add the last name field. 
+Let's add the last name field.
 
-```html 
+```html
 <form id="contact-form" method="POST" action="success.html">
   <div class="form-group">
     <label for="firstname">First Name</label>
@@ -319,7 +319,7 @@ Let's add the last name field.
     <input id="lastname" type="text" name="lastname" required>
     <span id="lastname-error"></span>
   </div>
-  
+
   <div class="form-group">
     <button type="submit">Submit</button>
   </div>
@@ -339,13 +339,13 @@ function isFieldValid(field) {
 	var errorSpan = document.querySelector('#' + field.id + '-error');
 	errorSpan.classList.remove('danger');
 	errorSpan.innerHTML = "";
-	
+
 	if (field.required && field.value.trim() === "") {
-	
+
 		// give the field an error class
 		field.classList.add('invalid');
-		
-		// give the error span a class and the error message. 
+
+		// give the error span a class and the error message.
 		errorSpan.classList.add('danger');
 		errorSpan.innerHTML = "This field is required.";
 
@@ -373,7 +373,7 @@ Let's move the `DOMContentLoaded` event listener into the HTML, where we will fi
 
 ```js
 function addFormValidation(theForm) {
-	
+
 	theForm.noValidate = true;
 
 	theForm.addEventListener('submit', function(evt) {
@@ -400,10 +400,10 @@ function addFormValidation(theForm) {
 		var errorSpan = document.querySelector('#' + field.id + '-error');
 		errorSpan.classList.remove('danger');
 		errorSpan.innerHTML = "";
-		
+
 		if (field.required && field.value.trim() === "") {
 			field.classList.add('invalid');
-			
+
 			errorSpan.classList.add('danger');
 			errorSpan.innerHTML = "This field is required.";
 
@@ -433,7 +433,7 @@ function addFormValidation(theForm) {
 }
 ```
 
-This way, if `addFormValidation` is passed an element that it can't use, it will die loudly on the console: 
+This way, if `addFormValidation` is passed an element that it can't use, it will die loudly on the console:
 
 > Uncaught Error: expected first parameter to addFormValidation to be a FORM.   
 >   addFormValidation @ form-validation.js:4   
@@ -497,7 +497,7 @@ Let's add the following above the required test in `isFieldValid`:
 ```js
 if (field.type === "email" && !isEmail(field.value)) {
 	field.classList.add('invalid');
-	
+
 	errorSpan.classList.add('danger');
 	errorSpan.innerHTML = "This field is required.";
 
@@ -506,7 +506,7 @@ if (field.type === "email" && !isEmail(field.value)) {
 
 if (field.required && field.value.trim() === "") {
 	field.classList.add('invalid');
-	
+
 	errorSpan.classList.add('danger');
 	errorSpan.innerHTML = "This field is required.";
 
@@ -516,7 +516,7 @@ if (field.required && field.value.trim() === "") {
 
 ### Refactor: Reduce Duplication of Code (make it DRY)
 
-This is working, but we have some duplication between the email and required checks. We should reduce that duplication to make our code more DRY. 
+This is working, but we have some duplication between the email and required checks. We should reduce that duplication to make our code more DRY.
 
 ```js
 	function isFieldValid(field) {
@@ -542,7 +542,7 @@ This is working, but we have some duplication between the email and required che
 
 		errorSpan.classList.remove('danger');
 		errorSpan.innerHTML = "";
-		
+
 		if (field.type === "email" && !isEmail(field.value)) {
 			errorMessage = "This should be a valid email address.";
 		}
@@ -553,7 +553,7 @@ This is working, but we have some duplication between the email and required che
 
 		if (errorMessage !== "") {
 			field.classList.add('invalid');
-			
+
 			errorSpan.classList.add('danger');
 			errorSpan.innerHTML = errorMessage;
 			return false;
@@ -572,7 +572,7 @@ Let's say that our name fields are still required, but now must be two or more c
 
 ```html
     <form id="contact-form" method="POST" action="success.html">
-      
+
       <div class="form-group">
         <label for="firstname">First Name</label>
         <input id="firstname" type="text" name="firstname" required minlength="2">
@@ -590,7 +590,7 @@ Let's say that our name fields are still required, but now must be two or more c
         <input id="email" type="email" name="email" required>
         <span id="email-error"></span>
       </div>
-      
+
       <div class="form-group">
         <button type="submit">Submit</button>
       </div>
@@ -627,4 +627,3 @@ If you need to validate a radio box, make one of them checked by default.
 
 * Add support for min and max numeric values
 * Add support for a 'confirm password' field -- it will only be valid if its value matches another field's value. To pull this off, research data attributes.
-
