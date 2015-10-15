@@ -5,9 +5,9 @@ layout: page
 
 Objects are collections of properties, with each property storing a value. If arrays are ordered lists, objects are more like dictionaries, only you can't sort an object.
 
-Everything in JavaScript is actually an object. Strings have properties such as `length`, `charAt`, and `split`. Numbers have properties like `toFixed`, and even booleans have `toString`.
+Everything in JavaScript is actually an object. Strings have properties such as `length`, `charAt`, and `split`. Numbers have properties like `toFixed`, and even Booleans have `toString`.
 
-Some of these properties contain simple values: strings, numbers and booleans. When a property contains a function, we call that property a **method**. Many of the examples above are methods. The `console` object has many methods on it, the most commonly used one is `log`.
+Some of these properties contain simple values: strings, numbers and Booleans. When a property contains a function, we call that property a **method**. Many of the examples above are methods. The `console` object has many methods on it, the most commonly used one is `log`.
 
 Objects that share a common set of properties and methods are said to be of the same class. Strings are all of the String class, Numbers are all of the Number class, and so on.
 
@@ -51,7 +51,7 @@ car.odometer += 15;
 car.fuel -= 1.07;
 ```
 
-Sometimes, we want to access properties programatically. We can pass a variable into some square brackets like we would an array:
+Sometimes, we want to access properties programmatically. We can pass a variable into some square brackets like we would an array:
 
 ```js
 var thing = 'make';
